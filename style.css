@@ -2596,6 +2596,67 @@ button {
         font-size: 26px;
     }
     
+    /* Mobile Table Optimization */
+    #comparison-wrapper {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        overflow: visible !important;
+    }
+    #comparison-table, #comparison-table thead, #comparison-table tbody, #comparison-table th, #comparison-table td, #comparison-table tr {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    #comparison-table thead {
+        display: none !important;
+    }
+    #comparison-table tr {
+        margin-bottom: 20px !important;
+        border: 1px solid rgba(197, 160, 89, 0.3) !important;
+        border-radius: 12px !important;
+        background-color: var(--color-primary-light) !important;
+        overflow: hidden !important;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2) !important;
+    }
+    #comparison-table td {
+        text-align: left !important;
+        border: none !important;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.1) !important;
+        padding: 15px 20px !important;
+    }
+    #comparison-table td:nth-child(1) {
+        background-color: var(--color-primary-deep) !important;
+        color: var(--color-accent-gold) !important;
+        font-family: var(--font-heading) !important;
+        font-size: 1.1rem !important;
+        text-align: center !important;
+        border-bottom: 2px solid var(--color-accent-gold) !important;
+    }
+    #comparison-table td:nth-child(2)::before {
+        content: "Pestisida Kimia Sintetis:";
+        display: block;
+        font-size: 0.8rem;
+        color: var(--color-text-muted);
+        margin-bottom: 8px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #comparison-table td:nth-child(3) {
+        background-color: rgba(197, 160, 89, 0.05) !important;
+    }
+    #comparison-table td:nth-child(3)::before {
+        content: "PESMIC (Alami Carica):";
+        display: block;
+        font-size: 0.8rem;
+        color: var(--color-accent-gold);
+        margin-bottom: 8px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 }
 
 /* ==========================================================================
