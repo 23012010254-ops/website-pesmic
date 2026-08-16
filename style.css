@@ -2563,12 +2563,35 @@ button {
         transform: translateY(-8px) rotate(-45deg);
     }
     
+    .logo-img {
+        height: 36px;
+    }
+
     .hero-section {
-        padding: 150px 0 80px;
+        padding: 130px 0 70px;
     }
     
     .hero-title {
-        font-size: 2.3rem;
+        font-size: 1.9rem;
+    }
+    
+    .hero-tagline {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .hero-wa-badge {
+        padding: 10px 20px !important;
+        margin-bottom: 24px !important;
+        gap: 12px !important;
+    }
+    
+    .hero-wa-badge p:last-child {
+        font-size: 0.95rem !important;
     }
     
     .hero-image-wrapper {
