@@ -785,7 +785,7 @@ button {
     width: 65px;
     height: auto;
     margin-bottom: 8px;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
 .xp-text {
@@ -1851,9 +1851,8 @@ button {
 
 .dev-logo-img {
     height: 30px;
-    width: 30px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: auto;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
 }
 
 .footer-links h3,
