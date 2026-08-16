@@ -359,7 +359,6 @@ button {
     background-color: transparent;
     padding: 0;
     border: none;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
 }
 
 .logo-img {
@@ -1816,18 +1815,15 @@ button {
 .footer-logo {
     display: inline-flex;
     align-items: center;
-    background-color: var(--color-support-beige);
-    padding: 8px 16px;
-    border-radius: var(--border-radius-sm);
+    background-color: transparent;
+    padding: 0;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: var(--transition-smooth);
-    border: 1px solid var(--color-accent-gold-dark);
+    border: none;
 }
 
 .footer-logo:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .footer-logo .logo-img {
