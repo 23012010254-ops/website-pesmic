@@ -2405,6 +2405,21 @@ button {
     }
 }
 
+/* ==========================================================================
+   GRID MODIFIERS
+   ========================================================================== */
+
+.products-grid-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.category-desc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
 /* Tablet Screens (768px to 1024px) */
 @media (max-width: 991px) {
     .section-padding {
@@ -2546,11 +2561,11 @@ button {
     }
     
     .hero-section {
-        padding: 120px 0 60px;
+        padding: 150px 0 80px;
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
     
     .hero-image-wrapper {
@@ -2586,8 +2601,10 @@ button {
     .ingredients-grid,
     .products-grid,
     .usage-grid,
-    .articles-grid {
-        grid-template-columns: 1fr;
+    .articles-grid,
+    .products-grid-2,
+    .category-desc-grid {
+        grid-template-columns: 1fr !important;
     }
     
     .timeline::before {
