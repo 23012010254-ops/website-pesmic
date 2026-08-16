@@ -2422,6 +2422,12 @@ button {
     margin-bottom: 50px;
 }
 
+.why-choose-bundling-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 /* Tablet Screens (768px to 1024px) */
 @media (max-width: 991px) {
     .section-padding {
@@ -2628,7 +2634,8 @@ button {
     .usage-grid,
     .articles-grid,
     .products-grid-2,
-    .category-desc-grid {
+    .category-desc-grid,
+    .why-choose-bundling-grid {
         grid-template-columns: 1fr !important;
     }
     
