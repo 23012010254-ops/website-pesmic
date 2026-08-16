@@ -274,9 +274,9 @@ button {
     gap: 15px;
 }
 
-.loader-content i {
-    font-size: 4rem;
-    color: var(--color-accent-gold);
+.loader-logo {
+    width: 64px;
+    height: auto;
 }
 
 .brand-name {
