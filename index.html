@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 <body>
 
@@ -1149,11 +1149,27 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/6281227672810?text=Halo%20PESMIC,%20saya%20tertarik%20dengan%20produk%20pestisida%20alami%20ini.%20Bisa%20berikan%20informasi%20lebih%20lanjut?" class="floating-wa" target="_blank" rel="noopener" aria-label="Hubungi kami melalui WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span class="floating-wa-tooltip">Hubungi Kami</span>
-    </a>
+    <!-- Floating Action Button Menu -->
+    <div class="floating-socials" id="floating-socials">
+        <div class="floating-socials-menu">
+            <a href="https://www.instagram.com/pesmic_store?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="floating-btn btn-ig" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="fab-tooltip">Instagram</span>
+            </a>
+            <a href="#" class="floating-btn btn-tiktok" target="_blank" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+                <span class="fab-tooltip">TikTok</span>
+            </a>
+            <a href="https://wa.me/6281227672810?text=Halo%20PESMIC,%20saya%20tertarik%20dengan%20produk%20pestisida%20alami%20ini.%20Bisa%20berikan%20informasi%20lebih%20lanjut?" class="floating-btn btn-wa" target="_blank" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="fab-tooltip">Chat Admin</span>
+            </a>
+        </div>
+        <button class="floating-btn main-btn" id="fab-toggle" aria-label="Menu Kontak">
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
 
     <!-- Scroll To Top Button -->
     <button id="scroll-to-top" class="scroll-to-top" aria-label="Kembali ke atas">

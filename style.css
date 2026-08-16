@@ -1920,25 +1920,73 @@ button {
    FLOATING BUTTONS
    ========================================================================== */
 
-.floating-wa {
+.floating-socials {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #25D366;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
     z-index: 999;
-    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.floating-wa::before {
+.floating-socials-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-socials.active .floating-socials-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.floating-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    border: none;
+    position: relative;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-ig { 
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+}
+.btn-tiktok { 
+    background-color: #000000; 
+}
+.btn-wa {
+    background-color: #25D366;
+}
+
+.floating-btn.main-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    background-color: #25D366;
+    z-index: 1000;
+}
+
+.floating-btn.main-btn::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -1955,44 +2003,51 @@ button {
     100% { transform: scale(1.5); opacity: 0; }
 }
 
-.floating-wa-tooltip {
+.main-btn .fa-xmark {
+    display: none;
+}
+
+.floating-socials.active .main-btn .fa-whatsapp {
+    display: none;
+}
+
+.floating-socials.active .main-btn .fa-xmark {
+    display: block;
+}
+
+.fab-tooltip {
     position: absolute;
-    right: 75px;
-    top: 50%;
-    transform: translateY(-50%) translateX(10px);
+    right: 70px;
     background-color: var(--color-accent-gold);
     color: var(--color-primary-dark);
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 4px;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
 }
 
-.floating-wa-tooltip::after {
+.fab-tooltip::after {
     content: '';
     position: absolute;
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
-    border-width: 6px;
+    border-width: 5px;
     border-style: solid;
     border-color: transparent transparent transparent var(--color-accent-gold);
 }
 
-.floating-wa:hover {
-    transform: scale(1.08);
-}
-
-.floating-wa:hover .floating-wa-tooltip {
+.floating-btn:hover .fab-tooltip {
     opacity: 1;
     visibility: visible;
-    transform: translateY(-50%) translateX(0);
+    transform: translateX(-5px);
 }
 
 /* Scroll To Top */
@@ -2225,158 +2280,7 @@ button {
     transform: translate(0) scale(1);
 }
 
-/* ==========================================================================
-   ADMIN EDITOR MODE STYLES
-   ========================================================================== */
 
-#admin-panel {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 10000;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-#admin-toggle-btn {
-    background-color: var(--color-accent-gold);
-    color: var(--color-primary-dark);
-    padding: 12px 20px;
-    border-radius: 30px;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: var(--transition-smooth);
-    border: 2px solid var(--color-primary-dark);
-}
-
-#admin-toggle-btn:hover {
-    background-color: var(--color-accent-gold-light);
-    transform: translateY(-2px);
-}
-
-#admin-toggle-btn.active {
-    background-color: #d32f2f;
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
-    border-color: #ffffff;
-}
-
-#admin-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(10, 28, 14, 0.95);
-    border-top: 2px solid var(--color-accent-gold);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(100%);
-    transition: var(--transition-smooth);
-}
-
-#admin-bar.active {
-    transform: translateY(0);
-}
-
-.admin-bar-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--color-text-charcoal);
-    font-size: 0.9rem;
-}
-
-.admin-bar-info i {
-    color: var(--color-accent-gold);
-    font-size: 1.1rem;
-}
-
-.admin-bar-actions {
-    display: flex;
-    gap: 12px;
-}
-
-.btn-admin {
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.85rem;
-    transition: var(--transition-smooth);
-}
-
-.btn-admin-save {
-    background-color: #2e7d32;
-    color: #ffffff;
-}
-
-.btn-admin-save:hover {
-    background-color: #388e3c;
-    transform: translateY(-2px);
-}
-
-.btn-admin-reset {
-    background-color: #455a64;
-    color: #ffffff;
-}
-
-.btn-admin-reset:hover {
-    background-color: #37474f;
-    transform: translateY(-2px);
-}
-
-/* Editable visual highlights */
-[contenteditable="true"] {
-    outline: 1px dashed rgba(197, 160, 89, 0.5) !important;
-    padding: 2px 4px;
-    border-radius: 4px;
-    background-color: rgba(197, 160, 89, 0.05);
-    transition: var(--transition-fast);
-    cursor: text;
-}
-
-[contenteditable="true"]:focus {
-    outline: 2px solid var(--color-accent-gold) !important;
-    background-color: rgba(197, 160, 89, 0.1);
-}
-
-/* Edit image badge styling */
-.edit-img-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--color-accent-gold);
-    color: var(--color-primary-dark);
-    border: 1px solid var(--color-primary-dark);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    cursor: pointer;
-    z-index: 50;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: var(--transition-smooth);
-}
-
-.edit-img-badge:hover {
-    background-color: var(--color-accent-gold-light);
-    transform: scale(1.05);
-}
 
 /* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
@@ -2684,25 +2588,17 @@ button {
         height: 38px;
     }
     
-    .floating-wa {
+    .floating-socials {
         bottom: 20px;
         right: 20px;
+    }
+    
+    .floating-btn.main-btn {
         width: 50px;
         height: 50px;
-        font-size: 1.6rem;
+        font-size: 26px;
     }
     
-    #admin-bar {
-        padding: 10px 15px;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-    
-    .admin-bar-actions {
-        width: 100%;
-        justify-content: center;
-    }
 }
 
 /* ==========================================================================
