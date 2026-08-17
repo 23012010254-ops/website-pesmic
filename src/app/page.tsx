@@ -67,16 +67,16 @@ export default async function Home() {
                     <p className="hero-subtitle">Pestisida dan pupuk alami berbasis <em>Carica papaya</em> yang ramah lingkungan, bebas residu kimia, dan aman untuk menjaga kesuburan tanah Anda.</p>
                     
                     {/* WhatsApp Number Badge */}
-                    <div className="hero-wa-badge" style={{{ background: 'rgba(255, 255, 255, 0.06)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '14px 24px', borderRadius: '12px', marginBottom: '32px', display: 'inline-flex', alignItems: 'center', gap: '14px' }}}>
-                        <i className="fa-solid fa-phone" style={{{ fontSize: '1.2rem', color: '#A3BCA7' }}}></i>
+                    <div className="hero-wa-badge" style={{ background: 'rgba(255, 255, 255, 0.06)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '14px 24px', borderRadius: '12px', marginBottom: '32px', display: 'inline-flex', alignItems: 'center', gap: '14px' }}>
+                        <i className="fa-solid fa-phone" style={{ fontSize: '1.2rem', color: '#A3BCA7' }}></i>
                         <div>
-                            <p style={{{ fontSize: '0.7rem', color: '#A3BCA7', margin: '0', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '600' }}}>Hubungi Kami</p>
-                            <p style={{{ fontSize: '1.05rem', fontWeight: '700', color: '#FAF6EE', margin: '0' }}}>+62 812-2767-2810</p>
+                            <p style={{ fontSize: '0.7rem', color: '#A3BCA7', margin: '0', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '600' }}>Hubungi Kami</p>
+                            <p style={{ fontSize: '1.05rem', fontWeight: '700', color: '#FAF6EE', margin: '0' }}>+62 812-2767-2810</p>
                         </div>
                     </div>
 
                     <div className="hero-actions">
-                        <a href="https://wa.me/6281227672810?text=Halo%20Pesmic%2C%20saya%20tertarik%20dengan%20produk%20Anda" target="_blank" className="btn btn-primary" style={{{ backgroundColor: '#25D366', color: 'white', borderColor: '#25D366' }}}><i className="fa-solid fa-comments"></i> Konsultasi via WhatsApp</a>
+                        <a href="https://wa.me/6281227672810?text=Halo%20Pesmic%2C%20saya%20tertarik%20dengan%20produk%20Anda" target="_blank" className="btn btn-primary" style={{ backgroundColor: '#25D366', color: 'white', borderColor: '#25D366' }}><i className="fa-solid fa-comments"></i> Konsultasi via WhatsApp</a>
                         <a href="#produk" className="btn btn-outline"><i className="fa-solid fa-cart-shopping"></i> Lihat Produk</a>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Card 2 */}
-                    <div className="why-card scroll-reveal fade-up" style={{{ animationDelay: '0.1s' }}}>
+                    <div className="why-card scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
                         <div className="why-icon-container">
                             <i className="fa-solid fa-earth-asia text-fresh"></i>
                             <span className="why-num">02</span>
@@ -119,7 +119,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Card 3 */}
-                    <div className="why-card scroll-reveal fade-up" style={{{ animationDelay: '0.2s' }}}>
+                    <div className="why-card scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
                         <div className="why-icon-container">
                             <i className="fa-solid fa-spray-can-sparkles text-fresh"></i>
                             <span className="why-num">03</span>
@@ -129,7 +129,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Card 4 */}
-                    <div className="why-card scroll-reveal fade-up" style={{{ animationDelay: '0.3s' }}}>
+                    <div className="why-card scroll-reveal fade-up" style={{ animationDelay: '0.3s' }}>
                         <div className="why-icon-container">
                             <i className="fa-solid fa-seedling text-fresh"></i>
                             <span className="why-num">04</span>
@@ -201,7 +201,7 @@ export default async function Home() {
                     <div className="ingredient-card scroll-reveal fade-up">
                         <div className="ingredient-img-wrapper">
                             <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-leaf text-fresh" style={{{ fontSize: '3rem', marginBottom: '10px' }}}></i>
+                                <i className="fa-solid fa-leaf text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
                                 <span>Ilustrasi Pepaya</span>
                             </div>
                         </div>
@@ -212,10 +212,10 @@ export default async function Home() {
                     </div>
                     
                     {/* Ingredient 2 */}
-                    <div className="ingredient-card scroll-reveal fade-up" style={{{ animationDelay: '0.1s' }}}>
+                    <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
                         <div className="ingredient-img-wrapper">
                             <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-mug-hot text-brown" style={{{ fontSize: '3rem', marginBottom: '10px' }}}></i>
+                                <i className="fa-solid fa-mug-hot text-brown" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
                                 <span>Ilustrasi Kopi</span>
                             </div>
                         </div>
@@ -226,10 +226,10 @@ export default async function Home() {
                     </div>
                     
                     {/* Ingredient 3 */}
-                    <div className="ingredient-card scroll-reveal fade-up" style={{{ animationDelay: '0.2s' }}}>
+                    <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
                         <div className="ingredient-img-wrapper">
                             <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-flask text-fresh" style={{{ fontSize: '3rem', marginBottom: '10px' }}}></i>
+                                <i className="fa-solid fa-flask text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
                                 <span>Bahan Organik Penunjang</span>
                             </div>
                         </div>
@@ -257,13 +257,13 @@ export default async function Home() {
                 
                 {/* Category Descriptions (2 Columns) */}
                 <div className="category-desc-grid scroll-reveal">
-                    <div style={{{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold)' }}}>
-                        <h3 style={{{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}}><i className="fa-solid fa-shield-halved"></i> A. Pestisida Alami</h3>
-                        <p style={{{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}}>Pestisida nabati berbasis ekstrak <em>Carica papaya</em> yang efektif membantu mengendalikan hama ulat, kutu, dan serangga pengganggu lainnya tanpa meninggalkan residu kimia berbahaya. Aman untuk tanaman hias, sayur, dan buah Anda.</p>
+                    <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold)' }}>
+                        <h3 style={{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}><i className="fa-solid fa-shield-halved"></i> A. Pestisida Alami</h3>
+                        <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Pestisida nabati berbasis ekstrak <em>Carica papaya</em> yang efektif membantu mengendalikan hama ulat, kutu, dan serangga pengganggu lainnya tanpa meninggalkan residu kimia berbahaya. Aman untuk tanaman hias, sayur, dan buah Anda.</p>
                     </div>
-                    <div style={{{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold-dark)' }}}>
-                        <h3 style={{{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}}><i className="fa-solid fa-seedling"></i> B. Pupuk Alami</h3>
-                        <p style={{{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}}>Pupuk organik cair konsentrat yang memperkaya nutrisi tanah, merangsang mikroba penyubur tanah, dan meningkatkan pertumbuhan akar serta tunas tanaman secara alami dan aman.</p>
+                    <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold-dark)' }}>
+                        <h3 style={{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}><i className="fa-solid fa-seedling"></i> B. Pupuk Alami</h3>
+                        <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Pupuk organik cair konsentrat yang memperkaya nutrisi tanah, merangsang mikroba penyubur tanah, dan meningkatkan pertumbuhan akar serta tunas tanaman secara alami dan aman.</p>
                     </div>
                 </div>
                 
@@ -279,9 +279,9 @@ export default async function Home() {
                             <h3 className="product-title">Pestisida Alami</h3>
                             <p className="product-desc">Pestisida nabati ukuran praktis untuk membantu mengendalikan hama tanaman hias, sayur, dan buah skala rumahan.</p>
                             <div className="product-price-row">
-                                <span style={{{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}}>Rp 35.000</span>
+                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 35.000</span>
                                 <span className="product-price">Rp 24.000</span>
-                                <span style={{{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}}>Hemat Rp 11.000</span>
+                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 11.000</span>
                             </div>
                             <button className="btn btn-primary btn-block btn-buy" data-product="Pestisida Alami 500ml" data-price="Rp 24.000">
                                 <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
@@ -290,7 +290,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Produk 2: Pestisida 1L */}
-                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{{ animationDelay: '0.1s' }}}>
+                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: '0.1s' }}>
                         <div className="product-badge">Pestisida</div>
                         <div className="product-img-container">
                             <img src="Paket%20Hemat%20Pesmic%20Pestisida.png" alt="Pestisida Alami 1L" className="product-img" />
@@ -300,9 +300,9 @@ export default async function Home() {
                             <h3 className="product-title">Pestisida Alami</h3>
                             <p className="product-desc">Pilihan lebih ekonomis untuk penggunaan dengan kebutuhan volume lebih besar atau area halaman kebun yang luas.</p>
                             <div className="product-price-row">
-                                <span style={{{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}}>Rp 60.000</span>
+                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 60.000</span>
                                 <span className="product-price">Rp 45.000</span>
-                                <span style={{{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}}>Hemat Rp 15.000</span>
+                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 15.000</span>
                             </div>
                             <button className="btn btn-primary btn-block btn-buy" data-product="Pestisida Alami 1L" data-price="Rp 45.000">
                                 <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
@@ -311,7 +311,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Produk 3: Pupuk 500ml */}
-                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{{ animationDelay: '0.2s' }}}>
+                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: '0.2s' }}>
                         <div className="product-badge">Pupuk POC</div>
                         <div className="product-img-container">
                             <img src="Paket%20Ekonomis%20Pupuk%20Organik.png" alt="Pupuk Alami 500ml" className="product-img" />
@@ -321,9 +321,9 @@ export default async function Home() {
                             <h3 className="product-title">Pupuk Alami</h3>
                             <p className="product-desc">Nutrisi konsentrat organik yang mempercepat pertumbuhan tunas baru dan memperkuat akar tanaman hias maupun sayur.</p>
                             <div className="product-price-row">
-                                <span style={{{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}}>Rp 35.000</span>
+                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 35.000</span>
                                 <span className="product-price">Rp 24.000</span>
-                                <span style={{{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}}>Hemat Rp 11.000</span>
+                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 11.000</span>
                             </div>
                             <button className="btn btn-primary btn-block btn-buy" data-product="Pupuk Alami 500ml" data-price="Rp 24.000">
                                 <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
@@ -332,7 +332,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Produk 4: Pupuk 1L */}
-                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{{ animationDelay: '0.3s' }}}>
+                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: '0.3s' }}>
                         <div className="product-badge">Pupuk POC</div>
                         <div className="product-img-container">
                             <img src="Paket%20Hemat%20Pupuk.png" alt="Pupuk Alami 1L" className="product-img" />
@@ -342,9 +342,9 @@ export default async function Home() {
                             <h3 className="product-title">Pupuk Alami</h3>
                             <p className="product-desc">Pupuk organik cair kapasitas 1 Liter. Mengembalikan unsur hara tanah yang hilang dan menjaga tanaman tetap subur alami.</p>
                             <div className="product-price-row">
-                                <span style={{{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}}>Rp 60.000</span>
+                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 60.000</span>
                                 <span className="product-price">Rp 45.000</span>
-                                <span style={{{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}}>Hemat Rp 15.000</span>
+                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 15.000</span>
                             </div>
                             <button className="btn btn-primary btn-block btn-buy" data-product="Pupuk Alami 1L" data-price="Rp 45.000">
                                 <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
@@ -405,20 +405,20 @@ export default async function Home() {
                 </div>
                 
                 {/* Bottom Info (Why Choose Bundling) */}
-                <div style={{{ marginTop: '50px', backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)' }}} className="scroll-reveal">
-                    <h3 style={{{ color: 'var(--color-accent-gold)', marginBottom: '20px', fontSize: '1.3rem', textAlign: 'center' }}}><i className="fa-solid fa-gift"></i> Kenapa Memilih Paket Bundling?</h3>
+                <div style={{ marginTop: '50px', backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)' }} className="scroll-reveal">
+                    <h3 style={{ color: 'var(--color-accent-gold)', marginBottom: '20px', fontSize: '1.3rem', textAlign: 'center' }}><i className="fa-solid fa-gift"></i> Kenapa Memilih Paket Bundling?</h3>
                     <div className="why-choose-bundling-grid">
-                        <div style={{{ backgroundColor: 'var(--color-primary-deep)', padding: '20px', borderRadius: 'var(--border-radius-sm)', border: 'var(--border-gold)' }}}>
-                            <p style={{{ fontWeight: '700', color: 'var(--color-accent-gold)', marginBottom: '8px' }}}><i className="fa-solid fa-scale-balanced"></i> Lebih Hemat</p>
-                            <p style={{{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}}>Harga paket bundling jauh lebih murah dibandingkan dengan membeli produk POC dan Pestisida secara terpisah.</p>
+                        <div style={{ backgroundColor: 'var(--color-primary-deep)', padding: '20px', borderRadius: 'var(--border-radius-sm)', border: 'var(--border-gold)' }}>
+                            <p style={{ fontWeight: '700', color: 'var(--color-accent-gold)', marginBottom: '8px' }}><i className="fa-solid fa-scale-balanced"></i> Lebih Hemat</p>
+                            <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>Harga paket bundling jauh lebih murah dibandingkan dengan membeli produk POC dan Pestisida secara terpisah.</p>
                         </div>
-                        <div style={{{ backgroundColor: 'var(--color-primary-deep)', padding: '20px', borderRadius: 'var(--border-radius-sm)', border: 'var(--border-gold)' }}}>
-                            <p style={{{ fontWeight: '700', color: 'var(--color-accent-gold)', marginBottom: '8px' }}}><i className="fa-solid fa-cubes"></i> Praktis & Komplit</p>
-                            <p style={{{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}}>Mendapatkan fungsi proteksi hama sekaligus nutrisi kesuburan tanaman dalam satu kali pembelian yang praktis.</p>
+                        <div style={{ backgroundColor: 'var(--color-primary-deep)', padding: '20px', borderRadius: 'var(--border-radius-sm)', border: 'var(--border-gold)' }}>
+                            <p style={{ fontWeight: '700', color: 'var(--color-accent-gold)', marginBottom: '8px' }}><i className="fa-solid fa-cubes"></i> Praktis & Komplit</p>
+                            <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>Mendapatkan fungsi proteksi hama sekaligus nutrisi kesuburan tanaman dalam satu kali pembelian yang praktis.</p>
                         </div>
-                        <div style={{{ backgroundColor: 'var(--color-primary-deep)', padding: '20px', borderRadius: 'var(--border-radius-sm)', border: 'var(--border-gold)' }}}>
-                            <p style={{{ fontWeight: '700', color: 'var(--color-accent-gold)', marginBottom: '8px' }}}><i className="fa-solid fa-seedling"></i> Sinergi Hasil Optimal</p>
-                            <p style={{{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}}>Formulasi alami POC dan Pestisida Nabati PESMIC bekerja secara bersinergi mendukung pertumbuhan maksimal tanaman Anda.</p>
+                        <div style={{ backgroundColor: 'var(--color-primary-deep)', padding: '20px', borderRadius: 'var(--border-radius-sm)', border: 'var(--border-gold)' }}>
+                            <p style={{ fontWeight: '700', color: 'var(--color-accent-gold)', marginBottom: '8px' }}><i className="fa-solid fa-seedling"></i> Sinergi Hasil Optimal</p>
+                            <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>Formulasi alami POC dan Pestisida Nabati PESMIC bekerja secara bersinergi mendukung pertumbuhan maksimal tanaman Anda.</p>
                         </div>
                     </div>
                 </div>
@@ -445,7 +445,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Step 2 */}
-                    <div className="timeline-item scroll-reveal fade-up" style={{{ animationDelay: '0.1s' }}}>
+                    <div className="timeline-item scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
                         <div className="timeline-circle">02</div>
                         <div className="timeline-content">
                             <h3>Kontak dengan Hama</h3>
@@ -454,7 +454,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Step 3 */}
-                    <div className="timeline-item scroll-reveal fade-up" style={{{ animationDelay: '0.2s' }}}>
+                    <div className="timeline-item scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
                         <div className="timeline-circle">03</div>
                         <div className="timeline-content">
                             <h3>Gangguan Aktivitas Hama</h3>
@@ -463,7 +463,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Step 4 */}
-                    <div className="timeline-item scroll-reveal fade-up" style={{{ animationDelay: '0.3s' }}}>
+                    <div className="timeline-item scroll-reveal fade-up" style={{ animationDelay: '0.3s' }}>
                         <div className="timeline-circle">04</div>
                         <div className="timeline-content">
                             <h3>Tanaman Terlindungi</h3>
@@ -497,7 +497,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Step 2 */}
-                    <div className="usage-step scroll-reveal fade-up" style={{{ animationDelay: '0.1s' }}}>
+                    <div className="usage-step scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
                         <div className="step-num-badge">2</div>
                         <div className="step-icon"><i className="fa-solid fa-glass-water"></i></div>
                         <h3>Larutkan Dosis</h3>
@@ -505,7 +505,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Step 3 */}
-                    <div className="usage-step scroll-reveal fade-up" style={{{ animationDelay: '0.2s' }}}>
+                    <div className="usage-step scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
                         <div className="step-num-badge">3</div>
                         <div className="step-icon"><i className="fa-solid fa-spray-can"></i></div>
                         <h3>Masukkan Sprayer</h3>
@@ -513,7 +513,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Step 4 */}
-                    <div className="usage-step scroll-reveal fade-up" style={{{ animationDelay: '0.3s' }}}>
+                    <div className="usage-step scroll-reveal fade-up" style={{ animationDelay: '0.3s' }}>
                         <div className="step-num-badge">4</div>
                         <div className="step-icon"><i className="fa-solid fa-shower"></i></div>
                         <h3>Semprot Merata</h3>
@@ -521,7 +521,7 @@ export default async function Home() {
                     </div>
                     
                     {/* Step 5 */}
-                    <div className="usage-step scroll-reveal fade-up" style={{{ animationDelay: '0.4s' }}}>
+                    <div className="usage-step scroll-reveal fade-up" style={{ animationDelay: '0.4s' }}>
                         <div className="step-num-badge">5</div>
                         <div className="step-icon"><i className="fa-solid fa-eye"></i></div>
                         <h3>Amati Tanaman</h3>
@@ -548,68 +548,68 @@ export default async function Home() {
                 </div>
                 
                 <div className="max-w-5xl mx-auto scroll-reveal fade-up">
-                    <div id="comparison-wrapper" style={{{ overflowX: 'auto', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', boxShadow: 'var(--box-shadow)' }}}>
-                        <table id="comparison-table" style={{{ width: '100%', borderCollapse: 'collapse', backgroundColor: 'var(--color-primary-light)', textAlign: 'left' }}}>
+                    <div id="comparison-wrapper" style={{ overflowX: 'auto', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', boxShadow: 'var(--box-shadow)' }}>
+                        <table id="comparison-table" style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: 'var(--color-primary-light)', textAlign: 'left' }}>
                             <thead>
-                                <tr style={{{ borderBottom: '2px solid rgba(197, 160, 89, 0.4)' }}}>
-                                    <th style={{{ padding: '20px', color: 'var(--color-accent-gold)', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '1.1rem', backgroundColor: 'var(--color-primary-deep)' }}}>Aspek Perbandingan</th>
-                                    <th style={{{ padding: '20px', color: 'var(--color-text-muted)', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '1.1rem', backgroundColor: 'var(--color-primary-deep)', borderLeft: '1px solid rgba(197, 160, 89, 0.15)' }}}>Pestisida Kimia Sintetis</th>
-                                    <th style={{{ padding: '20px', color: 'var(--color-primary-dark)', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '1.1rem', backgroundColor: 'var(--color-accent-gold)', borderLeft: '1px solid rgba(197, 160, 89, 0.15)' }}}>PESMIC (Alami Carica)</th>
+                                <tr style={{ borderBottom: '2px solid rgba(197, 160, 89, 0.4)' }}>
+                                    <th style={{ padding: '20px', color: 'var(--color-accent-gold)', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '1.1rem', backgroundColor: 'var(--color-primary-deep)' }}>Aspek Perbandingan</th>
+                                    <th style={{ padding: '20px', color: 'var(--color-text-muted)', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '1.1rem', backgroundColor: 'var(--color-primary-deep)', borderLeft: '1px solid rgba(197, 160, 89, 0.15)' }}>Pestisida Kimia Sintetis</th>
+                                    <th style={{ padding: '20px', color: 'var(--color-primary-dark)', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '1.1rem', backgroundColor: 'var(--color-accent-gold)', borderLeft: '1px solid rgba(197, 160, 89, 0.15)' }}>PESMIC (Alami Carica)</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr style={{{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)', backgroundColor: 'rgba(197, 160, 89, 0.02)' }}}>
-                                    <td style={{{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}}>Bahan Aktif</td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}}>
-                                        <i className="fa-solid fa-circle-xmark text-brown" style={{{ marginRight: '8px' }}}></i> Kimia Sintetis & Keras
+                                <tr style={{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)', backgroundColor: 'rgba(197, 160, 89, 0.02)' }}>
+                                    <td style={{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}>Bahan Aktif</td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}>
+                                        <i className="fa-solid fa-circle-xmark text-brown" style={{ marginRight: '8px' }}></i> Kimia Sintetis & Keras
                                     </td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}}>
-                                        <i className="fa-solid fa-circle-check text-fresh" style={{{ marginRight: '8px' }}}></i> 100% Ekstrak Daun Pepaya (Carica)
-                                    </td>
-                                </tr>
-                                <tr style={{{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)' }}}>
-                                    <td style={{{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}}>Residu Panen</td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}}>
-                                        <i className="fa-solid fa-circle-xmark text-brown" style={{{ marginRight: '8px' }}}></i> Meninggalkan residu racun berbahaya
-                                    </td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}}>
-                                        <i className="fa-solid fa-circle-check text-fresh" style={{{ marginRight: '8px' }}}></i> 0 Residu (Cepat terurai di alam)
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}>
+                                        <i className="fa-solid fa-circle-check text-fresh" style={{ marginRight: '8px' }}></i> 100% Ekstrak Daun Pepaya (Carica)
                                     </td>
                                 </tr>
-                                <tr style={{{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)', backgroundColor: 'rgba(197, 160, 89, 0.02)' }}}>
-                                    <td style={{{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}}>Dampak Tanah</td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}}>
-                                        <i className="fa-solid fa-circle-xmark text-brown" style={{{ marginRight: '8px' }}}></i> Merusak kesuburan tanah & mikroba
+                                <tr style={{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)' }}>
+                                    <td style={{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}>Residu Panen</td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}>
+                                        <i className="fa-solid fa-circle-xmark text-brown" style={{ marginRight: '8px' }}></i> Meninggalkan residu racun berbahaya
                                     </td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}}>
-                                        <i className="fa-solid fa-circle-check text-fresh" style={{{ marginRight: '8px' }}}></i> Sangat aman bagi ekosistem tanah & air
-                                    </td>
-                                </tr>
-                                <tr style={{{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)' }}}>
-                                    <td style={{{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}}>Keamanan Pangan</td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}}>
-                                        <i className="fa-solid fa-circle-xmark text-brown" style={{{ marginRight: '8px' }}}></i> Berpotensi bahaya bagi kesehatan konsumen
-                                    </td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}}>
-                                        <i className="fa-solid fa-circle-check text-fresh" style={{{ marginRight: '8px' }}}></i> Aman dikonsumsi setelah dibilas air
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}>
+                                        <i className="fa-solid fa-circle-check text-fresh" style={{ marginRight: '8px' }}></i> 0 Residu (Cepat terurai di alam)
                                     </td>
                                 </tr>
-                                <tr style={{{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)', backgroundColor: 'rgba(197, 160, 89, 0.02)' }}}>
-                                    <td style={{{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}}>Keberlanjutan</td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}}>
-                                        <i className="fa-solid fa-circle-xmark text-brown" style={{{ marginRight: '8px' }}}></i> Tidak berkelanjutan (hama cepat resisten)
+                                <tr style={{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)', backgroundColor: 'rgba(197, 160, 89, 0.02)' }}>
+                                    <td style={{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}>Dampak Tanah</td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}>
+                                        <i className="fa-solid fa-circle-xmark text-brown" style={{ marginRight: '8px' }}></i> Merusak kesuburan tanah & mikroba
                                     </td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}}>
-                                        <i className="fa-solid fa-circle-check text-fresh" style={{{ marginRight: '8px' }}}></i> Mendukung program pertanian berkelanjutan
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}>
+                                        <i className="fa-solid fa-circle-check text-fresh" style={{ marginRight: '8px' }}></i> Sangat aman bagi ekosistem tanah & air
                                     </td>
                                 </tr>
-                                <tr style={{{ borderBottom: 'none' }}}>
-                                    <td style={{{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}}>Keterjangkauan Harga</td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}}>
-                                        <i className="fa-solid fa-circle-xmark text-brown" style={{{ marginRight: '8px' }}}></i> Relatif mahal & cenderung terus naik
+                                <tr style={{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)' }}>
+                                    <td style={{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}>Keamanan Pangan</td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}>
+                                        <i className="fa-solid fa-circle-xmark text-brown" style={{ marginRight: '8px' }}></i> Berpotensi bahaya bagi kesehatan konsumen
                                     </td>
-                                    <td style={{{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}}>
-                                        <i className="fa-solid fa-circle-check text-fresh" style={{{ marginRight: '8px' }}}></i> Sangat terjangkau bagi kelompok petani lokal
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}>
+                                        <i className="fa-solid fa-circle-check text-fresh" style={{ marginRight: '8px' }}></i> Aman dikonsumsi setelah dibilas air
+                                    </td>
+                                </tr>
+                                <tr style={{ borderBottom: '1px solid rgba(197, 160, 89, 0.15)', backgroundColor: 'rgba(197, 160, 89, 0.02)' }}>
+                                    <td style={{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}>Keberlanjutan</td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}>
+                                        <i className="fa-solid fa-circle-xmark text-brown" style={{ marginRight: '8px' }}></i> Tidak berkelanjutan (hama cepat resisten)
+                                    </td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}>
+                                        <i className="fa-solid fa-circle-check text-fresh" style={{ marginRight: '8px' }}></i> Mendukung program pertanian berkelanjutan
+                                    </td>
+                                </tr>
+                                <tr style={{ borderBottom: 'none' }}>
+                                    <td style={{ padding: '18px 20px', fontWeight: '600', color: 'var(--color-accent-gold)' }}>Keterjangkauan Harga</td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', color: 'var(--color-text-muted)' }}>
+                                        <i className="fa-solid fa-circle-xmark text-brown" style={{ marginRight: '8px' }}></i> Relatif mahal & cenderung terus naik
+                                    </td>
+                                    <td style={{ padding: '18px 20px', borderLeft: '1px solid rgba(197, 160, 89, 0.15)', fontWeight: '600', color: 'var(--color-text-light)', backgroundColor: 'rgba(197, 160, 89, 0.05)' }}>
+                                        <i className="fa-solid fa-circle-check text-fresh" style={{ marginRight: '8px' }}></i> Sangat terjangkau bagi kelompok petani lokal
                                     </td>
                                 </tr>
                             </tbody>
@@ -617,14 +617,14 @@ export default async function Home() {
                     </div>
                     
                     {/* Highlight Badges */}
-                    <div style={{{ marginTop: '35px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}}>
-                        <span style={{{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', borderRadius: '30px', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '0.9rem', border: 'var(--border-gold)' }}}>
+                    <div style={{ marginTop: '35px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', borderRadius: '30px', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '0.9rem', border: 'var(--border-gold)' }}>
                             <i className="fa-solid fa-leaf"></i> Ramah Lingkungan
                         </span>
-                        <span style={{{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', borderRadius: '30px', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '0.9rem', border: 'var(--border-gold)' }}}>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', borderRadius: '30px', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '0.9rem', border: 'var(--border-gold)' }}>
                             <i className="fa-solid fa-seedling"></i> Tanpa Residu Toksik
                         </span>
-                        <span style={{{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', borderRadius: '30px', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '0.9rem', border: 'var(--border-gold)' }}}>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 22px', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', borderRadius: '30px', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '0.9rem', border: 'var(--border-gold)' }}>
                             <i className="fa-solid fa-rotate-left"></i> Pertanian Berkelanjutan
                         </span>
                     </div>
@@ -786,7 +786,7 @@ export default async function Home() {
                     <article className="article-card scroll-reveal fade-up" data-title="apa itu pestisida nabati" data-category="pilar-utama">
                         <div className="article-img-wrapper">
                             <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-leaf text-fresh" style={{{ fontSize: '3rem', marginBottom: '10px' }}}></i>
+                                <i className="fa-solid fa-leaf text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
                             </div>
                             <span className="article-category">Pestisida Nabati</span>
                         </div>
@@ -798,10 +798,10 @@ export default async function Home() {
                     </article>
                     
                     {/* Article 2 */}
-                    <article className="article-card scroll-reveal fade-up" data-title="mengapa pertanian berkelanjutan itu penting" data-category="pertanian" style={{{ animationDelay: '0.1s' }}}>
+                    <article className="article-card scroll-reveal fade-up" data-title="mengapa pertanian berkelanjutan itu penting" data-category="pertanian" style={{ animationDelay: '0.1s' }}>
                         <div className="article-img-wrapper">
                             <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-earth-asia text-fresh" style={{{ fontSize: '3rem', marginBottom: '10px' }}}></i>
+                                <i className="fa-solid fa-earth-asia text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
                             </div>
                             <span className="article-category">Keberlanjutan</span>
                         </div>
@@ -813,10 +813,10 @@ export default async function Home() {
                     </article>
                     
                     {/* Article 3 */}
-                    <article className="article-card scroll-reveal fade-up" data-title="mengenal hama tanaman" data-category="hama" style={{{ animationDelay: '0.2s' }}}>
+                    <article className="article-card scroll-reveal fade-up" data-title="mengenal hama tanaman" data-category="hama" style={{ animationDelay: '0.2s' }}>
                         <div className="article-img-wrapper">
                             <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-bug text-brown" style={{{ fontSize: '3rem', marginBottom: '10px' }}}></i>
+                                <i className="fa-solid fa-bug text-brown" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
                             </div>
                             <span className="article-category">Identifikasi Hama</span>
                         </div>
@@ -828,10 +828,10 @@ export default async function Home() {
                     </article>
                     
                     {/* Article 4 */}
-                    <article className="article-card scroll-reveal fade-up" data-title="daun pepaya dan potensinya" data-category="bahan-alami" style={{{ animationDelay: '0.3s' }}}>
+                    <article className="article-card scroll-reveal fade-up" data-title="daun pepaya dan potensinya" data-category="bahan-alami" style={{ animationDelay: '0.3s' }}>
                         <div className="article-img-wrapper">
                             <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-seedling text-fresh" style={{{ fontSize: '3rem', marginBottom: '10px' }}}></i>
+                                <i className="fa-solid fa-seedling text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
                             </div>
                             <span className="article-category">Daun Pepaya</span>
                         </div>
@@ -844,8 +844,8 @@ export default async function Home() {
                 </div>
                 
                 {/* No Results Search Message */}
-                <div id="no-results" className="text-center" style={{{ display: 'none', padding: '40px 0' }}}>
-                    <i className="fa-solid fa-magnifying-glass text-muted" style={{{ fontSize: '3rem', marginBottom: '15px' }}}></i>
+                <div id="no-results" className="text-center" style={{ display: 'none', padding: '40px 0' }}>
+                    <i className="fa-solid fa-magnifying-glass text-muted" style={{ fontSize: '3rem', marginBottom: '15px' }}></i>
                     <p className="text-muted">Maaf, artikel edukasi yang Anda cari tidak ditemukan.</p>
                 </div>
             </div>
@@ -1030,7 +1030,7 @@ export default async function Home() {
                             <div className="detail-icon"><i className="fa-solid fa-clock text-fresh"></i></div>
                             <div>
                                 <h4>Jam Operasional</h4>
-                                <p style={{{ lineHeight: '1.8' }}}>Senin - Kamis: 08:00 - 20:00<br />Jumat: 13:00 - 22:00<br />Sabtu: 08:00 - 20:00<br />Minggu: Tutup</p>
+                                <p style={{ lineHeight: '1.8' }}>Senin - Kamis: 08:00 - 20:00<br />Jumat: 13:00 - 22:00<br />Sabtu: 08:00 - 20:00<br />Minggu: Tutup</p>
                             </div>
                         </div>
                     </div>
@@ -1082,7 +1082,7 @@ export default async function Home() {
                 </div>
             </div>
             
-            <div className="footer-links scroll-reveal" style={{{ animationDelay: '0.1s' }}}>
+            <div className="footer-links scroll-reveal" style={{ animationDelay: '0.1s' }}>
                 <h3>Menu Pintasan</h3>
                 <nav className="footer-nav">
                     <a href="#beranda">Beranda</a>
@@ -1096,7 +1096,7 @@ export default async function Home() {
                 </nav>
             </div>
             
-            <div className="footer-socials scroll-reveal" style={{{ animationDelay: '0.2s' }}}>
+            <div className="footer-socials scroll-reveal" style={{ animationDelay: '0.2s' }}>
                 <h3>Ikuti Kami</h3>
                 <p>Ikuti perkembangan inovasi kami dan tips tani berkelanjutan melalui kanal sosial media.</p>
                 <div className="social-icons">
