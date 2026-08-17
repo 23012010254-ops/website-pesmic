@@ -4,16 +4,19 @@ import { urlFor } from '@/sanity/lib/image';
 export const revalidate = 60;
 
 async function getPakets() {
-  try {
-    return await client.fetch('*[_type == "paket"] | order(urutan asc)');
-  } catch(e) { 
-    console.error("Sanity error:", e);
-    return []; 
-  }
+  try { return await client.fetch('*[_type == "paket"] | order(urutan asc)'); } catch(e) { return []; }
+}
+async function getTestimonis() {
+  try { return await client.fetch('*[_type == "testimoni"] | order(urutan asc)'); } catch(e) { return []; }
+}
+async function getPencapaians() {
+  try { return await client.fetch('*[_type == "pencapaian"] | order(urutan asc)'); } catch(e) { return []; }
 }
 
 export default async function Home() {
   const pakets = await getPakets();
+  const testimonis = await getTestimonis();
+  const pencapaians = await getPencapaians();
 
   return (
     <main>
@@ -643,125 +646,60 @@ export default async function Home() {
                 
                 {/* Testimonial Grid with Text and Screenshots */}
                 <div className="testimonial-grid scroll-reveal fade-up">
-                    
-                    {/* Card 1: Bpk Nur */}
-                    <div className="testimonial-card">
-                        <div className="testi-stars">
-                            <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-                        </div>
-                        <p className="testi-text">"PESMIC sangat membantu mengendalikan hama tanaman sayur saya tanpa menyisakan residu kimia. Hasil panen jadi lebih aman dikonsumsi."</p>
-                        
-                        <div className="testi-screenshot-container" data-img="Testimoni%20BPK%20Nur.jpg" data-name="Bpk Nur">
-                            <img src="Testimoni%20BPK%20Nur.jpg" alt="Testimoni Bpk Nur" className="testi-screenshot-img" />
-                            <div className="testi-screenshot-overlay">
-                                <i className="fa-solid fa-magnifying-glass-plus"></i>
-                                <span>Perbesar Bukti Chat</span>
+                    {testimonis.length > 0 ? testimonis.map((testi: any, index: number) => (
+                        <div key={testi._id} className="testimonial-card">
+                            <div className="testi-stars">
+                                <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
+                            </div>
+                            {testi.keterangan && <p className="testi-text">"{testi.keterangan}"</p>}
+                            
+                            <div className="testi-screenshot-container" data-img={testi.gambar ? urlFor(testi.gambar).url() : ''} data-name={testi.nama}>
+                                {testi.gambar && (
+                                    <img src={urlFor(testi.gambar).url()} alt={`Testimoni ${testi.nama}`} className="testi-screenshot-img" />
+                                )}
+                                <div className="testi-screenshot-overlay">
+                                    <i className="fa-solid fa-magnifying-glass-plus"></i>
+                                    <span>Perbesar Bukti Chat</span>
+                                </div>
+                            </div>
+                            
+                            <div className="testi-author">
+                                <div className="author-info">
+                                    <h4>{testi.nama}</h4>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div className="testi-author">
-                            <div className="author-info">
-                                <h4>Bpk Nur</h4>
-                                <p className="text-muted">Petani Hortikultura</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    {/* Card 2: Bpk Waras */}
-                    <div className="testimonial-card">
-                        <div className="testi-stars">
-                            <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-                        </div>
-                        <p className="testi-text">"Penggunaannya sangat mudah dan hemat. Cukup disemprot berkala, tanaman jadi lebih tahan gangguan hama ulat."</p>
-                        
-                        <div className="testi-screenshot-container" data-img="Testimoni%20BPK%20Waras.jpg" data-name="Bpk Waras">
-                            <img src="Testimoni%20BPK%20Waras.jpg" alt="Testimoni Bpk Waras" className="testi-screenshot-img" />
-                            <div className="testi-screenshot-overlay">
-                                <i className="fa-solid fa-magnifying-glass-plus"></i>
-                                <span>Perbesar Bukti Chat</span>
-                            </div>
-                        </div>
-                        
-                        <div className="testi-author">
-                            <div className="author-info">
-                                <h4>Bpk Waras</h4>
-                                <p className="text-muted">Petani Padi & Kebun</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    {/* Card 3: Bu Wiwik */}
-                    <div className="testimonial-card">
-                        <div className="testi-stars">
-                            <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                        <p className="testi-text">"Sangat direkomendasikan untuk pehobi tanaman rumahan. Kutu putih di tanaman hias saya berkurang banyak setelah disemprot PESMIC."</p>
-                        
-                        <div className="testi-screenshot-container" data-img="Testimoni%20Bu%20Wiwik.jpg" data-name="Bu Wiwik">
-                            <img src="Testimoni%20Bu%20Wiwik.jpg" alt="Testimoni Bu Wiwik" className="testi-screenshot-img" />
-                            <div className="testi-screenshot-overlay">
-                                <i className="fa-solid fa-magnifying-glass-plus"></i>
-                                <span>Perbesar Bukti Chat</span>
-                            </div>
-                        </div>
-                        
-                        <div className="testi-author">
-                            <div className="author-info">
-                                <h4>Bu Wiwik</h4>
-                                <p className="text-muted">Pehobi Tanaman Hias</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Card 4: Ibu Dosen */}
-                    <div className="testimonial-card">
-                        <div className="testi-stars">
-                            <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-                        </div>
-                        <p className="testi-text">"Konsep pestisida nabati berbahan alami ini luar biasa. Sangat mendukung gerakan pertanian berkelanjutan dan ramah lingkungan."</p>
-                        
-                        <div className="testi-screenshot-container" data-img="Testimoni%20Ibu%20Dosen%20.jpg" data-name="Ibu Dosen">
-                            <img src="Testimoni%20Ibu%20Dosen%20.jpg" alt="Testimoni Ibu Dosen" className="testi-screenshot-img" />
-                            <div className="testi-screenshot-overlay">
-                                <i className="fa-solid fa-magnifying-glass-plus"></i>
-                                <span>Perbesar Bukti Chat</span>
-                            </div>
-                        </div>
-                        
-                        <div className="testi-author">
-                            <div className="author-info">
-                                <h4>Ibu Dosen</h4>
-                                <p className="text-muted">Akademisi & Penggiat Lingkungan</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Card 5: Pak Sutaji */}
-                    <div className="testimonial-card">
-                        <div className="testi-stars">
-                            <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-                        </div>
-                        <p className="testi-text">"Campuran bahan daun pepayanya terasa efektif. Sangat membantu mengurangi ketergantungan pada pestisida sintetis."</p>
-                        
-                        <div className="testi-screenshot-container" data-img="Testimoni%20Pak%20Sutaji.jpg" data-name="Pak Sutaji">
-                            <img src="Testimoni%20Pak%20Sutaji.jpg" alt="Testimoni Pak Sutaji" className="testi-screenshot-img" />
-                            <div className="testi-screenshot-overlay">
-                                <i className="fa-solid fa-magnifying-glass-plus"></i>
-                                <span>Perbesar Bukti Chat</span>
-                            </div>
-                        </div>
-                        
-                        <div className="testi-author">
-                            <div className="author-info">
-                                <h4>Pak Sutaji</h4>
-                                <p className="text-muted">Petani Buah</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    )) : (
+                        <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Belum ada testimoni.</p>
+                    )}
                 </div>
             </div>
         </section>
+        {/* "Pencapaian" Section */}
+        <section id="pencapaian" className="why-section bg-beige section-padding" style={{ borderTop: '1px solid rgba(197, 160, 89, 0.2)' }}>
+            <div className="container">
+                <div className="section-header text-center scroll-reveal">
+                    <span className="section-tagline text-fresh">PRESTASI KAMI</span>
+                    <h2 className="section-title">Pencapaian & Legalitas</h2>
+                    <p className="section-subtitle">Bukti nyata dari komitmen kami dalam menghadirkan produk berkualitas tinggi yang diakui.</p>
+                </div>
+                
+                <div className="why-grid">
+                    {pencapaians.length > 0 ? pencapaians.map((item: any, index: number) => (
+                        <div key={item._id} className="why-card scroll-reveal fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                            {item.gambar && (
+                                <img src={urlFor(item.gambar).url()} alt={item.judul} style={{ width: '100%', borderRadius: '12px', marginBottom: '20px', objectFit: 'cover', maxHeight: '250px' }} />
+                            )}
+                            <h3 className="why-card-title">{item.judul}</h3>
+                            <p className="why-card-desc">{item.deskripsi}</p>
+                        </div>
+                    )) : (
+                         <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Belum ada pencapaian.</p>
+                    )}
+                </div>
+            </div>
+        </section>
+
 
         {/* Edukasi Section (Blog Cards with Search) */}
         <section id="edukasi" className="education-section bg-beige section-padding">
