@@ -275,7 +275,7 @@ button {
 }
 
 .loader-logo {
-    width: 64px;
+    width: 96px;
     height: auto;
 }
 
@@ -362,7 +362,7 @@ button {
 }
 
 .logo-img {
-    height: 48px;
+    height: 72px;
     width: auto;
     object-fit: contain;
 }
@@ -1825,7 +1825,7 @@ button {
 }
 
 .footer-logo .logo-img {
-    height: 36px;
+    height: 54px;
     width: auto;
 }
 
@@ -2466,7 +2466,7 @@ button {
     }
     
     .logo-img {
-        height: 36px;
+        height: 54px;
     }
 
     .hero-section {
