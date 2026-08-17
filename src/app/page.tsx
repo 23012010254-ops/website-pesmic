@@ -1,5 +1,6 @@
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
+import Link from 'next/link';
 
 export const revalidate = 60;
 
@@ -9,6 +10,12 @@ async function getPakets() {
 async function getTestimonis() {
   try { return await client.fetch('*[_type == "testimoni"] | order(urutan asc)'); } catch(e) { return []; }
 }
+async function getFaqs() {
+  try { return await client.fetch('*[_type == "faq"] | order(urutan asc)'); } catch(e) { return []; }
+}
+async function getArtikels() {
+  try { return await client.fetch('*[_type == "artikel"] | order(tanggal desc)[0...3]'); } catch(e) { return []; }
+}
 async function getPencapaians() {
   try { return await client.fetch('*[_type == "pencapaian"] | order(urutan asc)'); } catch(e) { return []; }
 }
@@ -17,6 +24,8 @@ export default async function Home() {
   const pakets = await getPakets();
   const testimonis = await getTestimonis();
   const pencapaians = await getPencapaians();
+  const faqs = await getFaqs();
+  const artikels = await getArtikels();
 
   return (
     <main>
@@ -799,118 +808,57 @@ export default async function Home() {
                 </div>
                 
                 <div className="faq-accordion-wrapper scroll-reveal fade-up">
-                    {/* FAQ 1 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Apa itu PESMIC?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>PESMIC (Pestisida Alami Carica) adalah produk pestisida nabati/alami yang diformulasikan dari bahan-bahan organik nabati untuk membantu mengendalikan serangan hama pada tanaman secara ramah lingkungan.</p>
+                    {faqs.length > 0 ? faqs.map((faq: any, index: number) => (
+                        <div key={faq._id} className="faq-item">
+                            <button className="faq-question">
+                                <span>{faq.pertanyaan}</span>
+                                <i className="fa-solid fa-chevron-down faq-arrow"></i>
+                            </button>
+                            <div className="faq-answer">
+                                <p>{faq.jawaban}</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    {/* FAQ 2 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>PESMIC terbuat dari apa?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>PESMIC memanfaatkan ekstrak bahan alami utama seperti daun pepaya, ampas/kandungan kopi, serta bahan-bahan organik penunjang lainnya tanpa tambahan bahan kimia sintetis yang berbahaya bagi kelestarian lingkungan.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 3 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>PESMIC digunakan untuk tanaman apa?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>PESMIC sangat cocok digunakan untuk berbagai jenis tanaman hortikultura, termasuk tanaman hias (seperti monstera, mawar, aglonema), tanaman buah (seperti tomat, cabai), sayuran berdaun hijau, serta tanaman kebun lainnya.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 4 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Bagaimana cara menggunakan PESMIC?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>Kocok botol terlebih dahulu, encerkan cairan PESMIC dengan air bersih sesuai takaran penggunaan di label kemasan, masukkan ke dalam sprayer, lalu semprotkan secara merata pada bagian daun dan batang tanaman pada pagi atau sore hari secara berkala.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 5 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Berapa ukuran kemasan PESMIC?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>Saat ini PESMIC tersedia dalam dua ukuran kemasan botol siap pakai, yaitu kemasan praktis ukuran 500 mL dan kemasan hemat ukuran 1 Liter untuk kebutuhan berkebun yang lebih besar.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 6 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Berapa harga PESMIC?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>Ukuran kemasan 500 mL dibanderol dengan harga Rp25.000, sedangkan untuk kemasan 1 Liter dijual seharga Rp40.000. Kami juga menawarkan paket kombo dengan pupuk organik mulai dari Rp45.000.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 7 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Apakah PESMIC aman untuk tanaman?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>Ya, karena berbasis bahan nabati, PESMIC relatif aman untuk jaringan tanaman apabila digunakan sesuai dengan petunjuk dosis penggunaan. Lakukan uji coba pada sebagian kecil daun terlebih dahulu jika tanaman Anda tergolong sensitif.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 8 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Apakah PESMIC dapat digunakan bersama produk lain?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>Sebaiknya hindari mencampur langsung PESMIC dalam wadah yang sama dengan pestisida kimia sintetis atau pupuk berkadar asam/basa tinggi agar tidak merusak efikasi senyawa alami di dalamnya. Berikan jeda waktu aplikasi minimal 3-5 hari.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 9 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Bagaimana cara menyimpan PESMIC?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>Simpan botol PESMIC di tempat kering, sejuk, terhindar dari paparan sinar matahari langsung, serta jauhkan dari jangkauan anak-anak dan hewan peliharaan demi kenyamanan bersama.</p>
-                        </div>
-                    </div>
-                    
-                    {/* FAQ 10 */}
-                    <div className="faq-item">
-                        <button className="faq-question">
-                            <span>Bagaimana cara membeli PESMIC?</span>
-                            <i className="fa-solid fa-chevron-down faq-arrow"></i>
-                        </button>
-                        <div className="faq-answer">
-                            <p>Anda dapat memesan langsung secara online melalui chat WhatsApp resmi kami, halaman kontak di website ini, atau melalui toko resmi kami di marketplace kesayangan Anda.</p>
-                        </div>
-                    </div>
+                    )) : (
+                        <p style={{ textAlign: 'center', color: '#666' }}>Belum ada FAQ.</p>
+                    )}
                 </div>
             </div>
         </section>
+        {/* Artikel Section */}
+        <section id="artikel" className="artikel-section section-padding bg-beige">
+            <div className="container">
+                <div className="section-header text-center scroll-reveal">
+                    <span className="section-tagline text-fresh">BLOG & ARTIKEL</span>
+                    <h2 className="section-title">Tips & Informasi Pertanian</h2>
+                    <p className="section-subtitle">Baca artikel terbaru kami untuk merawat tanaman Anda secara optimal.</p>
+                </div>
+                
+                <div className="products-grid" style={{ marginTop: '40px' }}>
+                    {artikels.length > 0 ? artikels.map((artikel: any, index: number) => (
+                        <div key={artikel._id} className="product-card scroll-reveal fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                            <div className="product-img-container" style={{ height: '200px' }}>
+                                {artikel.gambar ? (
+                                    <img src={urlFor(artikel.gambar).url()} alt={artikel.judul} className="product-img" style={{ objectFit: 'cover' }} />
+                                ) : (
+                                    <div style={{ width: '100%', height: '100%', backgroundColor: '#e2e8f0' }}></div>
+                                )}
+                            </div>
+                            <div className="product-body">
+                                <span className="product-vol" style={{ color: 'var(--color-primary)' }}><i className="fa-regular fa-calendar"></i> {new Date(artikel.tanggal).toLocaleDateString('id-ID', {day: 'numeric', month: 'long', year: 'numeric'})}</span>
+                                <h3 className="product-title" style={{ marginTop: '10px' }}>{artikel.judul}</h3>
+                                <p className="product-desc">{artikel.ringkasan}</p>
+                                <Link href={`/artikel/${artikel.slug?.current}`} className="btn btn-outline btn-block" style={{ marginTop: '20px' }}>
+                                    Baca Selengkapnya
+                                </Link>
+                            </div>
+                        </div>
+                    )) : (
+                        <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Belum ada artikel.</p>
+                    )}
+                </div>
+            </div>
+        </section>
+
 
         {/* Big CTA Section */}
         <section className="action-cta-section text-white text-center relative overflow-hidden">
