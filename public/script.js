@@ -3,19 +3,20 @@
  * CV AGRI PANGAN SEJAHTERA - 2026
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initPesmicScript() {
 
     /* ==========================================================================
        1. LOADING SCREEN
        ========================================================================== */
     const loader = document.getElementById('loader');
     if (loader) {
-        window.addEventListener('load', () => {
+        if (document.readyState === 'complete') { setTimeout(() => { loader.style.opacity = '0'; loader.style.visibility = 'hidden'; }, 100); } else { window.addEventListener('load', () => {
             setTimeout(() => {
                 loader.style.opacity = '0';
                 loader.style.visibility = 'hidden';
             }, 600);
         });
+        }
         
         setTimeout(() => {
             loader.style.opacity = '0';
@@ -450,4 +451,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPesmicScript);
+} else {
+  initPesmicScript();
+}
+
