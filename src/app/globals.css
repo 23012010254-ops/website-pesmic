@@ -1041,6 +1041,10 @@ button {
     transition: var(--transition-smooth);
 }
 
+.products-grid-2 .product-img {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+}
+
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--box-shadow-hover);
