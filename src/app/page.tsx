@@ -216,7 +216,7 @@ export default async function Home() {
                     {/* Ingredient 1 */}
                     <div className="ingredient-card scroll-reveal fade-up">
                         <div className="ingredient-img-wrapper">
-                            <img src="daun pepaya.webp" alt="Daun Pepaya" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="daun_pepaya.webp" alt="Daun Pepaya" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         <div className="ingredient-info">
                             <h3>Daun Pepaya</h3>
@@ -227,7 +227,7 @@ export default async function Home() {
                     {/* Ingredient 2 */}
                     <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
                         <div className="ingredient-img-wrapper">
-                            <img src="biji kopi.jpg" alt="Ampas / Biji Kopi" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="biji_kopi.jpg" alt="Ampas / Biji Kopi" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         <div className="ingredient-info">
                             <h3>Ampas / Kopi</h3>
@@ -238,7 +238,7 @@ export default async function Home() {
                     {/* Ingredient 3 */}
                     <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
                         <div className="ingredient-img-wrapper">
-                            <img src="bahan lainnya.jpg" alt="Bahan Organik Penunjang" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="bahan_lainnya.jpg" alt="Bahan Organik Penunjang" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         <div className="ingredient-info">
                             <h3>Bahan Organik Pilihan</h3>
