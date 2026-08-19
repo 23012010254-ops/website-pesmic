@@ -163,6 +163,10 @@ export default async function Home() {
                 <div className="about-visual scroll-reveal fade-left">
                     <div className="about-image-stack">
                         <img src="tentang_pesmic.png" alt="Produk Pesmic" className="about-img-main" style={{ backgroundColor: '#ffffff', objectFit: 'contain' }} />
+                        <div className="about-experience">
+                            <img src="logo_agripangan.png" alt="Logo APS" className="xp-logo" />
+                            <span className="xp-text">Agri Pangan Sejahtera</span>
+                        </div>
                     </div>
                 </div>
                 <div className="about-content scroll-reveal fade-right">
