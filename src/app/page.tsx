@@ -162,11 +162,7 @@ export default async function Home() {
             <div className="container about-container">
                 <div className="about-visual scroll-reveal fade-left">
                     <div className="about-image-stack">
-                        <img src="foto%20produk%201.jpeg" alt="Kebun Hijau Alami" className="about-img-main" />
-                        <div className="about-experience">
-                            <img src="logo_agripangan.png" alt="Logo APS" className="xp-logo" />
-                            <span className="xp-text">Agri Pangan Sejahtera</span>
-                        </div>
+                        <img src="pupuk%20pestisida%20no%20bg.png" alt="Produk Pesmic" className="about-img-main" style={{ backgroundColor: '#ffffff', objectFit: 'contain' }} />
                     </div>
                 </div>
                 <div className="about-content scroll-reveal fade-right">
@@ -311,52 +307,6 @@ export default async function Home() {
                     )) : (
                         <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Produk sedang disiapkan.</p>
                     )}
-                </div>
-            </div>
-        </section>
-
-        {/* Tentang PESMIC Section */}
-        <section id="tentang" className="about-section section-padding">
-            <div className="container about-container">
-                <div className="about-visual scroll-reveal fade-left">
-                    <div className="about-image-stack">
-                        <img src="pupuk%20pestisida%20no%20bg.png" alt="Produk Pesmic" className="about-img-main" style={{ backgroundColor: '#ffffff', objectFit: 'contain' }} />
-                        <div className="about-experience">
-                            <img src="logo_agripangan.png" alt="Logo APS" className="xp-logo" />
-                            <span className="xp-text">Agri Pangan Sejahtera</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="about-content scroll-reveal fade-right">
-                    <span className="section-tagline text-fresh">TENTANG KAMI</span>
-                    <h2 className="section-title">Berawal dari Alam, untuk Tanaman yang Lebih Sehat.</h2>
-                    <p className="about-text">
-                        PESMIC merupakan inovasi pestisida nabati yang memanfaatkan bahan alami sebagai alternatif dalam pengendalian organisme pengganggu tanaman. Kami berkomitmen untuk menghadirkan solusi pertanian yang aman, efektif, dan terjangkau bagi semua kalangan.
-                    </p>
-                    <div className="about-points">
-                        <div className="about-point">
-                            <div className="point-icon"><i className="fa-solid fa-check"></i></div>
-                            <div>
-                                <h4>Pemanfaatan Bahan Alami</h4>
-                                <p>Mengutamakan bahan-bahan botani terpilih yang ramah ekosistem.</p>
-                            </div>
-                        </div>
-                        <div className="about-point">
-                            <div className="point-icon"><i className="fa-solid fa-check"></i></div>
-                            <div>
-                                <h4>Inovasi Sederhana & Aplikatif</h4>
-                                <p>Sangat mudah dipahami dan digunakan oleh pemula maupun petani berpengalaman.</p>
-                            </div>
-                        </div>
-                        <div className="about-point">
-                            <div className="point-icon"><i className="fa-solid fa-check"></i></div>
-                            <div>
-                                <h4>Pengurangan Ketergantungan Pestisida Sintetis</h4>
-                                <p>Mengurangi residu kimia pada tanaman pangan dan hias.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#bahan-alami" className="btn btn-link">Kenali PESMIC Lebih Dalam <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
