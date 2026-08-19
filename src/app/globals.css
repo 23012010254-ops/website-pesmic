@@ -2630,13 +2630,93 @@ button {
     
     .why-grid, 
     .ingredients-grid,
-    .products-grid,
     .usage-grid,
     .articles-grid,
-    .products-grid-2,
     .category-desc-grid,
     .why-choose-bundling-grid {
         grid-template-columns: 1fr !important;
+    }
+
+    .products-grid,
+    .products-grid-2 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .products-grid .product-card,
+    .products-grid-2 .product-card {
+        font-size: 0.85rem;
+    }
+
+    .products-grid .product-img-container,
+    .products-grid-2 .product-img-container {
+        height: 150px;
+        padding: 10px;
+    }
+
+    .products-grid .product-body,
+    .products-grid-2 .product-body {
+        padding: 12px;
+    }
+
+    .products-grid .product-title,
+    .products-grid-2 .product-title {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .products-grid .product-desc,
+    .products-grid-2 .product-desc {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .products-grid .product-price,
+    .products-grid-2 .product-price {
+        font-size: 1.1rem;
+    }
+
+    .products-grid .product-vol,
+    .products-grid-2 .product-vol {
+        font-size: 0.7rem;
+    }
+
+    .products-grid .hemat-tag,
+    .products-grid-2 .hemat-tag {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .products-grid .btn-buy,
+    .products-grid-2 .btn-buy {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+    }
+
+    .products-grid .btn-shopee,
+    .products-grid-2 .btn-shopee {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+    }
+
+    .products-grid .product-badge,
+    .products-grid-2 .product-badge {
+        font-size: 0.6rem;
+        padding: 5px 10px 5px 8px;
+        top: 8px;
+        left: -4px;
+        letter-spacing: 0.8px;
+    }
+
+    .products-grid .product-badge::before,
+    .products-grid-2 .product-badge::before {
+        width: 4px;
+        height: 4px;
+        bottom: -4px;
     }
     
     .timeline::before {
