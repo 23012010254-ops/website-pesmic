@@ -1428,13 +1428,25 @@ button {
    ========================================================================== */
 
 .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 25px;
+    padding: 10px 10px 30px 10px; /* Extra padding for shadow */
+    margin: 0 -10px 20px -10px; /* Offset the padding visually */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+.testimonial-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .testimonial-card {
+    flex: 0 0 calc(100% - 40px); /* Shows a peek of the next card on mobile */
+    max-width: 380px; /* Prevents it from getting too wide on desktop */
+    scroll-snap-align: center;
     background-color: var(--color-primary-light);
     padding: 35px 30px;
     border-radius: var(--border-radius-md);
@@ -1443,6 +1455,20 @@ button {
     display: flex;
     flex-direction: column;
     position: relative;
+    /* Prevent shrinking */
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonial-card {
+        flex: 0 0 calc(33.333% - 20px);
+    }
 }
 
 .testi-stars {
@@ -2481,10 +2507,7 @@ button {
         gap: 15px;
     }
     
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+
     
     .contact-container {
         grid-template-columns: 1fr;
