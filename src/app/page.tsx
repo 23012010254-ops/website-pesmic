@@ -19,9 +19,13 @@ async function getArtikels() {
 async function getPencapaians() {
   try { return await client.fetch('*[_type == "pencapaian"] | order(urutan asc)'); } catch(e) { return []; }
 }
+async function getProduks() {
+  try { return await client.fetch('*[_type == "produk"] | order(urutan asc)'); } catch(e) { return []; }
+}
 
 export default async function Home() {
   const pakets = await getPakets();
+  const produks = await getProduks();
   const testimonis = await getTestimonis();
   const pencapaians = await getPencapaians();
   const faqs = await getFaqs();
