@@ -2735,7 +2735,26 @@ button {
     }
     
     .comparison-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .comparison-placeholder {
+        height: 140px;
+        padding: 15px;
+    }
+
+    .comparison-placeholder p {
+        font-size: 0.75rem;
+    }
+
+    .card-status {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+    }
+
+    .comparison-note {
+        font-size: 0.75rem;
     }
     
     .contact-form-wrapper {
