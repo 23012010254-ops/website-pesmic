@@ -284,7 +284,7 @@ export default async function Home() {
                     <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal">
                         <div className="product-badge">Pestisida</div>
                         <div className="product-img-container">
-                            <img src="Paket%20Ekonomis%20Pesmic%20Pestisida%20.png" alt="Pestisida Alami 500ml" className="product-img" />
+                            <img src="Paket%20Hemat%20Pesmic%20Pestisida%20no%20bg.png" alt="Pestisida Alami 500ml" className="product-img" />
                         </div>
                         <div className="product-body">
                             <span className="product-vol"><i className="fa-solid fa-flask"></i> Ukuran: 500 ml</span>
@@ -305,7 +305,7 @@ export default async function Home() {
                     <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: '0.1s' }}>
                         <div className="product-badge">Pestisida</div>
                         <div className="product-img-container">
-                            <img src="Paket%20Hemat%20Pesmic%20Pestisida.png" alt="Pestisida Alami 1L" className="product-img" />
+                            <img src="pestisida%201%20liter.png" alt="Pestisida Alami 1L" className="product-img" />
                         </div>
                         <div className="product-body">
                             <span className="product-vol"><i className="fa-solid fa-flask"></i> Ukuran: 1 Liter</span>
