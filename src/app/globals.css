@@ -976,14 +976,11 @@ button {
 }
 
 .product-badge {
-    position: absolute;
-    top: 14px;
-    left: -6px;
-    z-index: 5;
     display: inline-flex;
+    align-self: flex-start;
     align-items: center;
     gap: 5px;
-    padding: 7px 16px 7px 12px;
+    padding: 6px 14px;
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 0.72rem;
@@ -992,24 +989,13 @@ button {
     color: #0a1f0d;
     background: linear-gradient(135deg, #c5a059 0%, #e8d5a3 40%, #c5a059 60%, #a8843e 100%);
     background-size: 200% 100%;
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px;
     box-shadow: 
         0 3px 12px rgba(197, 160, 89, 0.45),
-        0 1px 3px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.35);
     animation: badgeShimmer 3s ease-in-out infinite;
     transition: all 0.3s ease;
-}
-
-.product-badge::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 6px;
-    height: 6px;
-    background: #7a5e2a;
-    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    margin-bottom: 12px;
 }
 
 .product-badge::after {

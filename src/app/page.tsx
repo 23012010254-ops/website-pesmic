@@ -286,7 +286,6 @@ export default async function Home() {
                 <div className="products-grid products-grid-2">
                     {produks.length > 0 ? produks.map((produk: any, index: number) => (
                         <div key={produk._id} className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: `${index * 0.1}s` }}>
-                            {produk.badge && <div className="product-badge">{produk.badge}</div>}
                             <div className="product-img-container">
                                 {produk.gambar ? (
                                     <img src={urlFor(produk.gambar).url()} alt={produk.nama} className="product-img" />
@@ -295,6 +294,7 @@ export default async function Home() {
                                 )}
                             </div>
                             <div className="product-body">
+                                {produk.badge && <div className="product-badge">{produk.badge}</div>}
                                 {produk.ukuran && <span className="product-vol"><i className="fa-solid fa-flask"></i> {produk.ukuran}</span>}
                                 <h3 className="product-title">{produk.nama}</h3>
                                 <p className="product-desc">{produk.deskripsi}</p>
@@ -375,115 +375,7 @@ export default async function Home() {
         </section>
 
         {/* Produk Section */}
-        <section id="produk" className="products-section section-padding">
-            <div className="container">
-                <div className="section-header text-center scroll-reveal">
-                    <span className="section-tagline text-fresh">PRODUK SATUAN</span>
-                    <h2 className="section-title">Varian Produk PESMIC</h2>
-                    <p className="section-subtitle">Pilih produk satuan Pestisida Nabati atau Pupuk Organik Cair sesuai takaran yang Anda butuhkan.</p>
-                </div>
-                
-                {/* Category Descriptions (2 Columns) */}
-                <div className="category-desc-grid scroll-reveal">
-                    <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold)' }}>
-                        <h3 style={{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}><i className="fa-solid fa-shield-halved"></i> A. Pestisida Alami</h3>
-                        <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Pestisida nabati berbasis ekstrak <em>Carica papaya</em> yang efektif membantu mengendalikan hama ulat, kutu, dan serangga pengganggu lainnya tanpa meninggalkan residu kimia berbahaya. Aman untuk tanaman hias, sayur, dan buah Anda.</p>
-                    </div>
-                    <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold-dark)' }}>
-                        <h3 style={{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}><i className="fa-solid fa-seedling"></i> B. Pupuk Alami</h3>
-                        <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Pupuk organik cair konsentrat yang memperkaya nutrisi tanah, merangsang mikroba penyubur tanah, dan meningkatkan pertumbuhan akar serta tunas tanaman secara alami dan aman.</p>
-                    </div>
-                </div>
-                
-                <div className="products-grid products-grid-2">
-                    {/* Produk 1: Pestisida 500ml */}
-                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal">
-                        <div className="product-badge">Pestisida</div>
-                        <div className="product-img-container">
-                            <img src="Paket%20Hemat%20Pesmic%20Pestisida%20no%20bg.png" alt="Pestisida Alami 500ml" className="product-img" />
-                        </div>
-                        <div className="product-body">
-                            <span className="product-vol"><i className="fa-solid fa-flask"></i> Ukuran: 500 ml</span>
-                            <h3 className="product-title">Pestisida Alami</h3>
-                            <p className="product-desc">Pestisida nabati ukuran praktis untuk membantu mengendalikan hama tanaman hias, sayur, dan buah skala rumahan.</p>
-                            <div className="product-price-row">
-                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 35.000</span>
-                                <span className="product-price">Rp 24.000</span>
-                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 11.000</span>
-                            </div>
-                            <button className="btn btn-primary btn-block btn-buy" data-product="Pestisida Alami 500ml" data-price="Rp 24.000">
-                                <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
-                            </button>
-                        </div>
-                    </div>
-                    
-                    {/* Produk 2: Pestisida 1L */}
-                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: '0.1s' }}>
-                        <div className="product-badge">Pestisida</div>
-                        <div className="product-img-container">
-                            <img src="pestisida%201%20liter.png" alt="Pestisida Alami 1L" className="product-img" />
-                        </div>
-                        <div className="product-body">
-                            <span className="product-vol"><i className="fa-solid fa-flask"></i> Ukuran: 1 Liter</span>
-                            <h3 className="product-title">Pestisida Alami</h3>
-                            <p className="product-desc">Pilihan lebih ekonomis untuk penggunaan dengan kebutuhan volume lebih besar atau area halaman kebun yang luas.</p>
-                            <div className="product-price-row">
-                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 60.000</span>
-                                <span className="product-price">Rp 45.000</span>
-                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 15.000</span>
-                            </div>
-                            <button className="btn btn-primary btn-block btn-buy" data-product="Pestisida Alami 1L" data-price="Rp 45.000">
-                                <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
-                            </button>
-                        </div>
-                    </div>
-                    
-                    {/* Produk 3: Pupuk 500ml */}
-                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: '0.2s' }}>
-                        <div className="product-badge">Pupuk POC</div>
-                        <div className="product-img-container">
-                            <img src="Paket%20Ekonomis%20Pupuk%20Organik.png" alt="Pupuk Alami 500ml" className="product-img" />
-                        </div>
-                        <div className="product-body">
-                            <span className="product-vol"><i className="fa-solid fa-flask"></i> Ukuran: 500 ml</span>
-                            <h3 className="product-title">Pupuk Alami</h3>
-                            <p className="product-desc">Nutrisi konsentrat organik yang mempercepat pertumbuhan tunas baru dan memperkuat akar tanaman hias maupun sayur.</p>
-                            <div className="product-price-row">
-                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 35.000</span>
-                                <span className="product-price">Rp 24.000</span>
-                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 11.000</span>
-                            </div>
-                            <button className="btn btn-primary btn-block btn-buy" data-product="Pupuk Alami 500ml" data-price="Rp 24.000">
-                                <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
-                            </button>
-                        </div>
-                    </div>
-                    
-                    {/* Produk 4: Pupuk 1L */}
-                    <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: '0.3s' }}>
-                        <div className="product-badge">Pupuk POC</div>
-                        <div className="product-img-container">
-                            <img src="Paket%20Hemat%20Pupuk.png" alt="Pupuk Alami 1L" className="product-img" />
-                        </div>
-                        <div className="product-body">
-                            <span className="product-vol"><i className="fa-solid fa-flask"></i> Ukuran: 1 Liter</span>
-                            <h3 className="product-title">Pupuk Alami</h3>
-                            <p className="product-desc">Pupuk organik cair kapasitas 1 Liter. Mengembalikan unsur hara tanah yang hilang dan menjaga tanaman tetap subur alami.</p>
-                            <div className="product-price-row">
-                                <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Rp 60.000</span>
-                                <span className="product-price">Rp 45.000</span>
-                                <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>Hemat Rp 15.000</span>
-                            </div>
-                            <button className="btn btn-primary btn-block btn-buy" data-product="Pupuk Alami 1L" data-price="Rp 45.000">
-                                <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {/* Paket Bundling Section */}
+                {/* Paket Bundling Section */}
         <section id="bundling" className="bundling-section section-padding bg-beige">
             <div className="container">
                 <div className="section-header text-center scroll-reveal">
