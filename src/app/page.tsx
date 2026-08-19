@@ -259,7 +259,7 @@ export default async function Home() {
         </section>
 
         {/* Produk Section */}
-        <section id="produk" className="products-section section-padding">
+                <section id="produk" className="products-section section-padding">
             <div className="container">
                 <div className="section-header text-center scroll-reveal">
                     <span className="section-tagline text-fresh">PRODUK SATUAN</span>
@@ -307,7 +307,6 @@ export default async function Home() {
                     )) : (
                         <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Produk sedang disiapkan.</p>
                     )}
-                </div>
                 </div>
             </div>
         </section>
