@@ -301,7 +301,7 @@ export default async function Home() {
                                 <div className="product-price-row">
                                     {produk.hargaNormal && <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', margin: '4px 0' }}>Rp {produk.hargaNormal.toLocaleString('id-ID')}</span>}
                                     <span className="product-price">Rp {produk.hargaDiskon?.toLocaleString('id-ID') || 0}</span>
-                                    {produk.hemat && <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>{produk.hemat}</span>}
+                                    {produk.hemat && <span className="hemat-tag">🔥 {produk.hemat}</span>}
                                 </div>
                                 <button className="btn btn-primary btn-block btn-buy" data-product={produk.nama} data-price={`Rp ${produk.hargaDiskon?.toLocaleString('id-ID') || 0}`}>
                                     <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
@@ -548,7 +548,7 @@ export default async function Home() {
                                 )}
                             </div>
                             <div className="product-body">
-                                {paket.badge && <div className="product-badge" style={{ marginBottom: "10px" }}>{paket.badge}</div>}
+                                {paket.badge && <div className="product-badge">{paket.badge}</div>}
                             <h3 className="product-title">{paket.nama}</h3>
                                 <p className="product-desc">{paket.deskripsi}</p>
                                 <div className="product-price-row">
@@ -559,9 +559,7 @@ export default async function Home() {
                                     )}
                                     <span className="product-price">Rp {paket.hargaDiskon?.toLocaleString('id-ID')}</span>
                                     {paket.hemat && (
-                                        <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>
-                                            {paket.hemat}
-                                        </span>
+                                        <span className="hemat-tag">🔥 {paket.hemat}</span>
                                     )}
                                 </div>
                                 <button className="btn btn-primary btn-block btn-buy" data-product={paket.nama} data-price={`Rp ${paket.hargaDiskon?.toLocaleString('id-ID')}`}>
