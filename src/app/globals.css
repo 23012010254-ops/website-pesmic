@@ -1081,6 +1081,7 @@ button {
     color: var(--color-text-muted);
     margin-bottom: 20px;
     flex-grow: 1;
+    text-align: justify;
 }
 
 .product-price-row {
@@ -2678,10 +2679,7 @@ button {
     .products-grid-2 .product-desc {
         font-size: 0.75rem;
         line-height: 1.4;
-        -webkit-line-clamp: 3;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        text-align: justify;
     }
 
     .products-grid .product-price,
