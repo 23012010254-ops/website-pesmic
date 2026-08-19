@@ -756,6 +756,7 @@ button {
 .about-image-stack {
     position: relative;
     padding-bottom: 30px;
+    transform: translateY(-25%);
 }
 
 .about-img-main {
@@ -2817,16 +2818,20 @@ button {
         border-radius: 0 !important;
         overflow: visible !important;
     }
-    #comparison-table, #comparison-table thead, #comparison-table tbody, #comparison-table th, #comparison-table td, #comparison-table tr {
+    #comparison-table, #comparison-table thead, #comparison-table th, #comparison-table td, #comparison-table tr {
         display: block !important;
         width: 100% !important;
         box-sizing: border-box !important;
+    }
+    #comparison-table tbody {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
     #comparison-table thead {
         display: none !important;
     }
     #comparison-table tr {
-        margin-bottom: 20px !important;
         border: 1px solid rgba(197, 160, 89, 0.3) !important;
         border-radius: 12px !important;
         background-color: var(--color-primary-light) !important;
@@ -2837,7 +2842,8 @@ button {
         text-align: left !important;
         border: none !important;
         border-bottom: 1px solid rgba(197, 160, 89, 0.1) !important;
-        padding: 15px 20px !important;
+        padding: 10px 12px !important;
+        font-size: 0.85rem !important;
     }
     #comparison-table td:nth-child(1) {
         background-color: var(--color-primary-deep) !important;
