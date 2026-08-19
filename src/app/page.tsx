@@ -315,66 +315,7 @@ export default async function Home() {
             </div>
         </section>
 
-        {/* Bahan Alami Section */}
-        <section id="bahan-alami" className="ingredients-section bg-beige section-padding">
-            <div className="container">
-                <div className="section-header text-center scroll-reveal">
-                    <span className="section-tagline text-fresh">FORMULASI NABATI</span>
-                    <h2 className="section-title">Terinspirasi dari Kekayaan Alam</h2>
-                    <p className="section-subtitle">Bahan-bahan organik berkualitas tinggi yang menjadi pilar keampuhan formula pestisida nabati PESMIC.</p>
-                </div>
-                
-                <div className="ingredients-grid">
-                    {/* Ingredient 1 */}
-                    <div className="ingredient-card scroll-reveal fade-up">
-                        <div className="ingredient-img-wrapper">
-                            <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-leaf text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                                <span>Ilustrasi Pepaya</span>
-                            </div>
-                        </div>
-                        <div className="ingredient-info">
-                            <h3>Daun Pepaya</h3>
-                            <p>Mengandung senyawa alkaloid papain yang berperan aktif sebagai penolak (repellent) dan penghambat nafsu makan hama ulat maupun serangga pengganggu lainnya.</p>
-                        </div>
-                    </div>
-                    
-                    {/* Ingredient 2 */}
-                    <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
-                        <div className="ingredient-img-wrapper">
-                            <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-mug-hot text-brown" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                                <span>Ilustrasi Kopi</span>
-                            </div>
-                        </div>
-                        <div className="ingredient-info">
-                            <h3>Ampas / Kopi</h3>
-                            <p>Kandungan kafein alami dan asam organik bertindak sebagai insektisida alami serta membantu menjauhkan siput, semut, dan ulat tanah dari media tanam.</p>
-                        </div>
-                    </div>
-                    
-                    {/* Ingredient 3 */}
-                    <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
-                        <div className="ingredient-img-wrapper">
-                            <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-flask text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                                <span>Bahan Organik Penunjang</span>
-                            </div>
-                        </div>
-                        <div className="ingredient-info">
-                            <h3>Bahan Organik Pilihan</h3>
-                            <p>Bahan alami penunjang yang diproses secara khusus untuk memperkuat daya rekat cairan pestisida pada daun serta menstabilkan masa simpan produk.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="ingredient-disclaimer text-center scroll-reveal">
-                    <p><i className="fa-solid fa-circle-info"></i> Komposisi dan formulasi mengikuti pengembangan produk PESMIC. Informasi dirancang untuk tujuan edukasi dan tidak mengandung klaim absolut tanpa pengujian laboratorium resmi.</p>
-                </div>
-            </div>
-        </section>
 
-        {/* Produk Section */}
                 {/* Paket Bundling Section */}
         <section id="bundling" className="bundling-section section-padding bg-beige">
             <div className="container">
