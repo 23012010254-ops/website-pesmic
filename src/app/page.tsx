@@ -379,14 +379,15 @@ export default async function Home() {
                 <div className="products-grid">
                     {pakets.length > 0 ? pakets.map((paket: any, index: number) => (
                         <div key={paket._id} className="product-card scroll-reveal fade-up" data-category="paket-lengkap" style={{ animationDelay: `${index * 0.1}s` }}>
-                            {paket.badge && <div className="product-badge">{paket.badge}</div>}
+                            
                             <div className="product-img-container">
                                 {paket.gambar && (
                                     <img src={urlFor(paket.gambar).url()} alt={paket.nama} className="product-img" />
                                 )}
                             </div>
                             <div className="product-body">
-                                <h3 className="product-title">{paket.nama}</h3>
+                                {paket.badge && <div className="product-badge" style={{ marginBottom: "10px" }}>{paket.badge}</div>}
+                            <h3 className="product-title">{paket.nama}</h3>
                                 <p className="product-desc">{paket.deskripsi}</p>
                                 <div className="product-price-row">
                                     {paket.hargaNormal && (
@@ -729,67 +730,28 @@ export default async function Home() {
                 
                 {/* Articles Grid */}
                 <div className="articles-grid" id="articles-grid">
-                    {/* Article 1 */}
-                    <article className="article-card scroll-reveal fade-up" data-title="apa itu pestisida nabati" data-category="pilar-utama">
-                        <div className="article-img-wrapper">
-                            <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-leaf text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
+                    {artikels.length > 0 ? artikels.map((artikel: any, index: number) => (
+                        <article key={artikel._id} className="article-card scroll-reveal fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                            <div className="article-img-wrapper" style={{ height: '200px', padding: 0 }}>
+                                {artikel.gambar ? (
+                                    <img src={urlFor(artikel.gambar).url()} alt={artikel.judul} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                ) : (
+                                    <div className="article-placeholder-img text-center" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <i className="fa-solid fa-leaf text-fresh" style={{ fontSize: '3rem' }}></i>
+                                    </div>
+                                )}
                             </div>
-                            <span className="article-category">Pestisida Nabati</span>
-                        </div>
-                        <div className="article-body">
-                            <h3 className="article-title">Apa Itu Pestisida Nabati?</h3>
-                            <p className="article-excerpt">Penjelasan sederhana mengenai pestisida alami yang berasal dari ekstrak tumbuhan untuk mengendalikan serangan hama pada tanaman tanpa merusak lingkungan.</p>
-                            <a href="#" className="btn-read-more" data-article="1">Baca Selengkapnya <i className="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    
-                    {/* Article 2 */}
-                    <article className="article-card scroll-reveal fade-up" data-title="mengapa pertanian berkelanjutan itu penting" data-category="pertanian" style={{ animationDelay: '0.1s' }}>
-                        <div className="article-img-wrapper">
-                            <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-earth-asia text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
+                            <div className="article-body">
+                                <span className="product-vol" style={{ color: 'var(--color-primary)', fontSize: '0.8rem', display: 'block', marginBottom: '10px' }}><i className="fa-regular fa-calendar"></i> {new Date(artikel.tanggal).toLocaleDateString('id-ID', {day: 'numeric', month: 'long', year: 'numeric'})}</span>
+                                <h3 className="article-title">{artikel.judul}</h3>
+                                <p className="article-excerpt">{artikel.ringkasan}</p>
+                                <Link href={`/artikel/${artikel.slug?.current}`} className="btn-read-more">Baca Selengkapnya <i className="fa-solid fa-arrow-right"></i></Link>
                             </div>
-                            <span className="article-category">Keberlanjutan</span>
-                        </div>
-                        <div className="article-body">
-                            <h3 className="article-title">Mengapa Pertanian Berkelanjutan Itu Penting?</h3>
-                            <p className="article-excerpt">Edukasi mendalam mengenai hubungan harmonis antara pelestarian lingkungan, kesehatan manusia, dan ketahanan pangan jangka panjang.</p>
-                            <a href="#" className="btn-read-more" data-article="2">Baca Selengkapnya <i className="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    
-                    {/* Article 3 */}
-                    <article className="article-card scroll-reveal fade-up" data-title="mengenal hama tanaman" data-category="hama" style={{ animationDelay: '0.2s' }}>
-                        <div className="article-img-wrapper">
-                            <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-bug text-brown" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                            </div>
-                            <span className="article-category">Identifikasi Hama</span>
-                        </div>
-                        <div className="article-body">
-                            <h3 className="article-title">Mengenal Hama Tanaman</h3>
-                            <p className="article-excerpt">Kenali jenis-jenis serangga pengganggu yang sering menyerang tanaman hortikultura beserta metode pencegahan dini secara alami.</p>
-                            <a href="#" className="btn-read-more" data-article="3">Baca Selengkapnya <i className="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    
-                    {/* Article 4 */}
-                    <article className="article-card scroll-reveal fade-up" data-title="daun pepaya dan potensinya" data-category="bahan-alami" style={{ animationDelay: '0.3s' }}>
-                        <div className="article-img-wrapper">
-                            <div className="article-placeholder-img text-center">
-                                <i className="fa-solid fa-seedling text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                            </div>
-                            <span className="article-category">Daun Pepaya</span>
-                        </div>
-                        <div className="article-body">
-                            <h3 className="article-title">Daun Pepaya dan Potensinya</h3>
-                            <p className="article-excerpt">Bagaimana kandungan senyawa aktif di dalam daun pepaya bekerja sebagai pengendali organisme penggangu tanaman (OPT) secara alami.</p>
-                            <a href="#" className="btn-read-more" data-article="4">Baca Selengkapnya <i className="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+                        </article>
+                    )) : (
+                        <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Belum ada artikel edukasi.</p>
+                    )}
                 </div>
-                
                 {/* No Results Search Message */}
                 <div id="no-results" className="text-center" style={{ display: 'none', padding: '40px 0' }}>
                     <i className="fa-solid fa-magnifying-glass text-muted" style={{ fontSize: '3rem', marginBottom: '15px' }}></i>
@@ -824,40 +786,7 @@ export default async function Home() {
                 </div>
             </div>
         </section>
-        {/* Artikel Section */}
-        <section id="artikel" className="artikel-section section-padding bg-beige">
-            <div className="container">
-                <div className="section-header text-center scroll-reveal">
-                    <span className="section-tagline text-fresh">BLOG & ARTIKEL</span>
-                    <h2 className="section-title">Tips & Informasi Pertanian</h2>
-                    <p className="section-subtitle">Baca artikel terbaru kami untuk merawat tanaman Anda secara optimal.</p>
-                </div>
-                
-                <div className="products-grid" style={{ marginTop: '40px' }}>
-                    {artikels.length > 0 ? artikels.map((artikel: any, index: number) => (
-                        <div key={artikel._id} className="product-card scroll-reveal fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                            <div className="product-img-container" style={{ height: '200px' }}>
-                                {artikel.gambar ? (
-                                    <img src={urlFor(artikel.gambar).url()} alt={artikel.judul} className="product-img" style={{ objectFit: 'cover' }} />
-                                ) : (
-                                    <div style={{ width: '100%', height: '100%', backgroundColor: '#e2e8f0' }}></div>
-                                )}
-                            </div>
-                            <div className="product-body">
-                                <span className="product-vol" style={{ color: 'var(--color-primary)' }}><i className="fa-regular fa-calendar"></i> {new Date(artikel.tanggal).toLocaleDateString('id-ID', {day: 'numeric', month: 'long', year: 'numeric'})}</span>
-                                <h3 className="product-title" style={{ marginTop: '10px' }}>{artikel.judul}</h3>
-                                <p className="product-desc">{artikel.ringkasan}</p>
-                                <Link href={`/artikel/${artikel.slug?.current}`} className="btn btn-outline btn-block" style={{ marginTop: '20px' }}>
-                                    Baca Selengkapnya
-                                </Link>
-                            </div>
-                        </div>
-                    )) : (
-                        <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Belum ada artikel.</p>
-                    )}
-                </div>
-            </div>
-        </section>
+        
 
 
         {/* Big CTA Section */}
