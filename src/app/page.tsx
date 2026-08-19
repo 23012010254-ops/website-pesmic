@@ -216,10 +216,7 @@ export default async function Home() {
                     {/* Ingredient 1 */}
                     <div className="ingredient-card scroll-reveal fade-up">
                         <div className="ingredient-img-wrapper">
-                            <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-leaf text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                                <span>Ilustrasi Pepaya</span>
-                            </div>
+                            <img src="daun pepaya.webp" alt="Daun Pepaya" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         <div className="ingredient-info">
                             <h3>Daun Pepaya</h3>
@@ -230,10 +227,7 @@ export default async function Home() {
                     {/* Ingredient 2 */}
                     <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
                         <div className="ingredient-img-wrapper">
-                            <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-mug-hot text-brown" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                                <span>Ilustrasi Kopi</span>
-                            </div>
+                            <img src="biji kopi.jpg" alt="Ampas / Biji Kopi" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         <div className="ingredient-info">
                             <h3>Ampas / Kopi</h3>
@@ -244,10 +238,7 @@ export default async function Home() {
                     {/* Ingredient 3 */}
                     <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
                         <div className="ingredient-img-wrapper">
-                            <div className="ingredient-placeholder-img text-center">
-                                <i className="fa-solid fa-flask text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                                <span>Bahan Organik Penunjang</span>
-                            </div>
+                            <img src="bahan lainnya.jpg" alt="Bahan Organik Penunjang" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         <div className="ingredient-info">
                             <h3>Bahan Organik Pilihan</h3>
