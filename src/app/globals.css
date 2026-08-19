@@ -789,11 +789,11 @@ button {
 }
 
 .xp-text {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-text-muted);
+    color: var(--color-primary-dark);
 }
 
 .about-text {
