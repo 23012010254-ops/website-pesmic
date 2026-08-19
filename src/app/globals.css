@@ -994,7 +994,7 @@ button {
 
 .product-img-container {
     height: 250px;
-    background-color: var(--color-primary-deep);
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
