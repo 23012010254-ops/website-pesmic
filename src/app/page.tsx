@@ -162,7 +162,7 @@ export default async function Home() {
             <div className="container about-container">
                 <div className="about-visual scroll-reveal fade-left">
                     <div className="about-image-stack">
-                        <img src="pupuk%20pestisida%20no%20bg.png" alt="Produk Pesmic" className="about-img-main" style={{ backgroundColor: '#ffffff', objectFit: 'contain' }} />
+                        <img src="tentang_pesmic.png" alt="Produk Pesmic" className="about-img-main" style={{ backgroundColor: '#ffffff', objectFit: 'contain' }} />
                     </div>
                 </div>
                 <div className="about-content scroll-reveal fade-right">
