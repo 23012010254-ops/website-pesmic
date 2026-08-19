@@ -306,6 +306,9 @@ export default async function Home() {
                                 <button className="btn btn-primary btn-block btn-buy" data-product={produk.nama} data-price={`Rp ${produk.hargaDiskon?.toLocaleString('id-ID') || 0}`}>
                                     <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
                                 </button>
+                                <a href="https://s.shopee.co.id/5fo09l5fNp" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-block btn-shopee" style={{ marginTop: '10px', backgroundColor: '#EE4D2D', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                                    <i className="fa-solid fa-shop"></i> Beli di Shopee
+                                </a>
                             </div>
                         </div>
                     )) : (
