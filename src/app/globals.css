@@ -381,7 +381,7 @@ button {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     position: relative;
     padding: 4px 0;
 }
@@ -485,7 +485,7 @@ button {
 
 .hero-subtitle {
     font-size: 1.15rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 28px;
     max-width: 620px;
     line-height: 1.7;
@@ -528,7 +528,7 @@ button {
     width: 380px;
     height: 380px;
     border-radius: 50% 30% 70% 40% / 50% 60% 40% 50%;
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,7 +570,7 @@ button {
 
 .floating-badge {
     position: absolute;
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     padding: 10px 18px;
     border-radius: 30px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -660,7 +660,7 @@ button {
 
 .section-subtitle {
     font-size: 1.05rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     line-height: 1.7;
 }
 
@@ -735,7 +735,7 @@ button {
 
 .why-card p {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 /* ==========================================================================
@@ -770,7 +770,7 @@ button {
     bottom: 0;
     right: 0;
     background-color: #ffffff;
-    color: var(--color-accent-gold);
+    color: var(--color-primary-dark);
     padding: 24px 30px;
     border-radius: var(--border-radius-md);
     border: var(--border-gold);
@@ -793,12 +793,12 @@ button {
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .about-text {
     font-size: 1.1rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 32px;
 }
 
@@ -836,7 +836,7 @@ button {
 
 .about-point p {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 /* ==========================================================================
@@ -851,7 +851,7 @@ button {
 }
 
 .ingredient-card {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border-radius: var(--border-radius-md);
     overflow: hidden;
     box-shadow: var(--box-shadow);
@@ -902,7 +902,7 @@ button {
 
 .ingredient-info p {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .ingredient-disclaimer {
@@ -936,8 +936,8 @@ button {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.9rem;
-    background-color: #ffffff;
-    color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
+    color: var(--color-text-muted);
     border: var(--border-gold);
     transition: var(--transition-smooth);
 }
@@ -1047,7 +1047,7 @@ button {
 
 .product-desc {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 20px;
     flex-grow: 1;
 }
@@ -1120,7 +1120,7 @@ button {
 }
 
 .timeline-content {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     padding: 24px 30px;
     border-radius: var(--border-radius-md);
     border: var(--border-gold);
@@ -1141,14 +1141,14 @@ button {
 
 .timeline-content p {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .how-it-works-note {
     max-width: 600px;
     margin: 0 auto;
     font-size: 0.85rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .how-it-works-note i {
@@ -1167,7 +1167,7 @@ button {
 }
 
 .usage-step {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     padding: 30px 20px;
     border-radius: var(--border-radius-md);
     text-align: center;
@@ -1224,7 +1224,7 @@ button {
 
 .usage-step p {
     font-size: 0.85rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     line-height: 1.5;
 }
 
@@ -1268,7 +1268,7 @@ button {
 }
 
 .comparison-card {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border-radius: var(--border-radius-md);
     overflow: hidden;
     box-shadow: var(--box-shadow);
@@ -1313,12 +1313,12 @@ button {
 
 .comparison-placeholder p {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .comparison-note {
     font-size: 0.85rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 /* ==========================================================================
@@ -1333,7 +1333,7 @@ button {
 }
 
 .testimonial-card {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     padding: 35px 30px;
     border-radius: var(--border-radius-md);
     box-shadow: var(--box-shadow);
@@ -1365,7 +1365,7 @@ button {
 
 .testimonial-placeholder-label {
     font-size: 0.8rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 50px;
 }
 
@@ -1449,7 +1449,7 @@ button {
     width: 100%;
     padding: 16px 20px 16px 52px;
     border-radius: 30px;
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border: var(--border-gold);
     font-family: inherit;
     font-size: 0.95rem;
@@ -1471,7 +1471,7 @@ button {
 }
 
 .article-card {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border-radius: var(--border-radius-md);
     overflow: hidden;
     box-shadow: var(--box-shadow);
@@ -1529,7 +1529,7 @@ button {
 
 .article-excerpt {
     font-size: 0.88rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 20px;
     flex-grow: 1;
 }
@@ -1567,7 +1567,7 @@ button {
 }
 
 .faq-item {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border-radius: var(--border-radius-md);
     overflow: hidden;
     border: var(--border-gold);
@@ -1604,7 +1604,7 @@ button {
 .faq-answer p {
     padding: 24px 30px;
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     border-top: var(--border-gold);
 }
 
@@ -1665,7 +1665,7 @@ button {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .cta-actions {
@@ -1687,7 +1687,7 @@ button {
 
 .contact-desc-text {
     font-size: 1rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 40px;
 }
 
@@ -1706,7 +1706,7 @@ button {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border: var(--border-gold);
     display: flex;
     align-items: center;
@@ -1725,7 +1725,7 @@ button {
 .detail-item a, 
 .detail-item p {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .detail-item a:hover {
@@ -1733,7 +1733,7 @@ button {
 }
 
 .contact-form-wrapper {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     padding: 50px 40px;
     border-radius: var(--border-radius-md);
     box-shadow: var(--box-shadow);
@@ -1748,7 +1748,7 @@ button {
 
 .form-instruction {
     font-size: 0.88rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 30px;
 }
 
@@ -1829,7 +1829,7 @@ button {
 
 .footer-tagline {
     font-size: 0.95rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 30px;
     font-style: italic;
     max-width: 320px;
@@ -1868,7 +1868,7 @@ button {
 
 .footer-nav a {
     font-size: 0.9rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .footer-nav a:hover {
@@ -1877,7 +1877,7 @@ button {
 
 .footer-socials p {
     font-size: 0.9rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     margin-bottom: 20px;
 }
 
@@ -1890,7 +1890,7 @@ button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     color: var(--color-accent-gold);
     display: flex;
     align-items: center;
@@ -1908,7 +1908,7 @@ button {
 .footer-bottom {
     padding: 30px 0;
     font-size: 0.85rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 /* ==========================================================================
@@ -2056,7 +2056,7 @@ button {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border: var(--border-gold);
     color: var(--color-accent-gold);
     display: flex;
@@ -2172,7 +2172,7 @@ button {
 }
 
 .article-modal-content {
-    background-color: #ffffff;
+    background-color: var(--color-primary-light);
     border: var(--border-gold);
     padding: 40px;
     border-radius: var(--border-radius-md);
@@ -2237,7 +2237,7 @@ button {
 .article-modal-body ul {
     margin-left: 20px;
     margin-bottom: 20px;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .article-modal-body li {
@@ -2639,7 +2639,7 @@ button {
         content: "Pestisida Kimia Sintetis:";
         display: block;
         font-size: 0.8rem;
-        color: var(--color-primary-dark);
+        color: var(--color-text-muted);
         margin-bottom: 8px;
         font-weight: 700;
         text-transform: uppercase;
