@@ -320,7 +320,7 @@ export default async function Home() {
             <div className="container about-container">
                 <div className="about-visual scroll-reveal fade-left">
                     <div className="about-image-stack">
-                        <img src="foto%20produk%201.jpeg" alt="Kebun Hijau Alami" className="about-img-main" />
+                        <img src="pupuk%20pestisida%20no%20bg.png" alt="Produk Pesmic" className="about-img-main" style={{ backgroundColor: '#ffffff', objectFit: 'contain' }} />
                         <div className="about-experience">
                             <img src="logo_agripangan.png" alt="Logo APS" className="xp-logo" />
                             <span className="xp-text">Agri Pangan Sejahtera</span>
