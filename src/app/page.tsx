@@ -280,6 +280,165 @@ export default async function Home() {
                 </div>
                 
                 <div className="products-grid products-grid-2">
+                    {produks.length > 0 ? produks.map((produk: any, index: number) => (
+                        <div key={produk._id} className="product-card scroll-reveal fade-up" data-category="fokus-tunggal" style={{ animationDelay: `${index * 0.1}s` }}>
+                            {produk.badge && <div className="product-badge">{produk.badge}</div>}
+                            <div className="product-img-container">
+                                {produk.gambar ? (
+                                    <img src={urlFor(produk.gambar).url()} alt={produk.nama} className="product-img" />
+                                ) : (
+                                    <div style={{ width: '100%', height: '100%', backgroundColor: '#e2e8f0' }}></div>
+                                )}
+                            </div>
+                            <div className="product-body">
+                                {produk.ukuran && <span className="product-vol"><i className="fa-solid fa-flask"></i> {produk.ukuran}</span>}
+                                <h3 className="product-title">{produk.nama}</h3>
+                                <p className="product-desc">{produk.deskripsi}</p>
+                                <div className="product-price-row">
+                                    {produk.hargaNormal && <span style={{ textDecoration: 'line-through', color: 'var(--color-text-muted)', fontSize: '0.9rem', display: 'block', margin: '4px 0' }}>Rp {produk.hargaNormal.toLocaleString('id-ID')}</span>}
+                                    <span className="product-price">Rp {produk.hargaDiskon?.toLocaleString('id-ID') || 0}</span>
+                                    {produk.hemat && <span style={{ display: 'inline-block', backgroundColor: 'rgba(197, 160, 89, 0.12)', color: 'var(--color-accent-gold)', border: '1px solid rgba(197, 160, 89, 0.25)', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '700', marginLeft: '8px' }}>{produk.hemat}</span>}
+                                </div>
+                                <button className="btn btn-primary btn-block btn-buy" data-product={produk.nama} data-price={`Rp ${produk.hargaDiskon?.toLocaleString('id-ID') || 0}`}>
+                                    <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    )) : (
+                        <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#666' }}>Produk sedang disiapkan.</p>
+                    )}
+                </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Tentang PESMIC Section */}
+        <section id="tentang" className="about-section section-padding">
+            <div className="container about-container">
+                <div className="about-visual scroll-reveal fade-left">
+                    <div className="about-image-stack">
+                        <img src="foto%20produk%201.jpeg" alt="Kebun Hijau Alami" className="about-img-main" />
+                        <div className="about-experience">
+                            <img src="logo_agripangan.png" alt="Logo APS" className="xp-logo" />
+                            <span className="xp-text">Agri Pangan Sejahtera</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="about-content scroll-reveal fade-right">
+                    <span className="section-tagline text-fresh">TENTANG KAMI</span>
+                    <h2 className="section-title">Berawal dari Alam, untuk Tanaman yang Lebih Sehat.</h2>
+                    <p className="about-text">
+                        PESMIC merupakan inovasi pestisida nabati yang memanfaatkan bahan alami sebagai alternatif dalam pengendalian organisme pengganggu tanaman. Kami berkomitmen untuk menghadirkan solusi pertanian yang aman, efektif, dan terjangkau bagi semua kalangan.
+                    </p>
+                    <div className="about-points">
+                        <div className="about-point">
+                            <div className="point-icon"><i className="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Pemanfaatan Bahan Alami</h4>
+                                <p>Mengutamakan bahan-bahan botani terpilih yang ramah ekosistem.</p>
+                            </div>
+                        </div>
+                        <div className="about-point">
+                            <div className="point-icon"><i className="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Inovasi Sederhana & Aplikatif</h4>
+                                <p>Sangat mudah dipahami dan digunakan oleh pemula maupun petani berpengalaman.</p>
+                            </div>
+                        </div>
+                        <div className="about-point">
+                            <div className="point-icon"><i className="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Pengurangan Ketergantungan Pestisida Sintetis</h4>
+                                <p>Mengurangi residu kimia pada tanaman pangan dan hias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#bahan-alami" className="btn btn-link">Kenali PESMIC Lebih Dalam <i className="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        {/* Bahan Alami Section */}
+        <section id="bahan-alami" className="ingredients-section bg-beige section-padding">
+            <div className="container">
+                <div className="section-header text-center scroll-reveal">
+                    <span className="section-tagline text-fresh">FORMULASI NABATI</span>
+                    <h2 className="section-title">Terinspirasi dari Kekayaan Alam</h2>
+                    <p className="section-subtitle">Bahan-bahan organik berkualitas tinggi yang menjadi pilar keampuhan formula pestisida nabati PESMIC.</p>
+                </div>
+                
+                <div className="ingredients-grid">
+                    {/* Ingredient 1 */}
+                    <div className="ingredient-card scroll-reveal fade-up">
+                        <div className="ingredient-img-wrapper">
+                            <div className="ingredient-placeholder-img text-center">
+                                <i className="fa-solid fa-leaf text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
+                                <span>Ilustrasi Pepaya</span>
+                            </div>
+                        </div>
+                        <div className="ingredient-info">
+                            <h3>Daun Pepaya</h3>
+                            <p>Mengandung senyawa alkaloid papain yang berperan aktif sebagai penolak (repellent) dan penghambat nafsu makan hama ulat maupun serangga pengganggu lainnya.</p>
+                        </div>
+                    </div>
+                    
+                    {/* Ingredient 2 */}
+                    <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.1s' }}>
+                        <div className="ingredient-img-wrapper">
+                            <div className="ingredient-placeholder-img text-center">
+                                <i className="fa-solid fa-mug-hot text-brown" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
+                                <span>Ilustrasi Kopi</span>
+                            </div>
+                        </div>
+                        <div className="ingredient-info">
+                            <h3>Ampas / Kopi</h3>
+                            <p>Kandungan kafein alami dan asam organik bertindak sebagai insektisida alami serta membantu menjauhkan siput, semut, dan ulat tanah dari media tanam.</p>
+                        </div>
+                    </div>
+                    
+                    {/* Ingredient 3 */}
+                    <div className="ingredient-card scroll-reveal fade-up" style={{ animationDelay: '0.2s' }}>
+                        <div className="ingredient-img-wrapper">
+                            <div className="ingredient-placeholder-img text-center">
+                                <i className="fa-solid fa-flask text-fresh" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
+                                <span>Bahan Organik Penunjang</span>
+                            </div>
+                        </div>
+                        <div className="ingredient-info">
+                            <h3>Bahan Organik Pilihan</h3>
+                            <p>Bahan alami penunjang yang diproses secara khusus untuk memperkuat daya rekat cairan pestisida pada daun serta menstabilkan masa simpan produk.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="ingredient-disclaimer text-center scroll-reveal">
+                    <p><i className="fa-solid fa-circle-info"></i> Komposisi dan formulasi mengikuti pengembangan produk PESMIC. Informasi dirancang untuk tujuan edukasi dan tidak mengandung klaim absolut tanpa pengujian laboratorium resmi.</p>
+                </div>
+            </div>
+        </section>
+
+        {/* Produk Section */}
+        <section id="produk" className="products-section section-padding">
+            <div className="container">
+                <div className="section-header text-center scroll-reveal">
+                    <span className="section-tagline text-fresh">PRODUK SATUAN</span>
+                    <h2 className="section-title">Varian Produk PESMIC</h2>
+                    <p className="section-subtitle">Pilih produk satuan Pestisida Nabati atau Pupuk Organik Cair sesuai takaran yang Anda butuhkan.</p>
+                </div>
+                
+                {/* Category Descriptions (2 Columns) */}
+                <div className="category-desc-grid scroll-reveal">
+                    <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold)' }}>
+                        <h3 style={{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}><i className="fa-solid fa-shield-halved"></i> A. Pestisida Alami</h3>
+                        <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Pestisida nabati berbasis ekstrak <em>Carica papaya</em> yang efektif membantu mengendalikan hama ulat, kutu, dan serangga pengganggu lainnya tanpa meninggalkan residu kimia berbahaya. Aman untuk tanaman hias, sayur, dan buah Anda.</p>
+                    </div>
+                    <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '30px', borderRadius: 'var(--border-radius-md)', border: 'var(--border-gold)', borderLeft: '4px solid var(--color-accent-gold-dark)' }}>
+                        <h3 style={{ color: 'var(--color-accent-gold)', marginBottom: '12px', fontSize: '1.25rem' }}><i className="fa-solid fa-seedling"></i> B. Pupuk Alami</h3>
+                        <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Pupuk organik cair konsentrat yang memperkaya nutrisi tanah, merangsang mikroba penyubur tanah, dan meningkatkan pertumbuhan akar serta tunas tanaman secara alami dan aman.</p>
+                    </div>
+                </div>
+                
+                <div className="products-grid products-grid-2">
                     {/* Produk 1: Pestisida 500ml */}
                     <div className="product-card scroll-reveal fade-up" data-category="fokus-tunggal">
                         <div className="product-badge">Pestisida</div>
