@@ -305,7 +305,7 @@ function initPesmicScript() {
             const email = document.getElementById('form-email').value.trim();
             const messageText = document.getElementById('form-message').value.trim();
             
-            const adminEmail = 'admin@pesmic.com'; // You can change this later
+            const adminEmail = 'cvagripangansejahtera@gmail.com';
             const subject = encodeURIComponent(`Konsultasi PESMIC dari ${name}`);
             const body = encodeURIComponent(
                 `Halo Admin PESMIC,\n\n` +
