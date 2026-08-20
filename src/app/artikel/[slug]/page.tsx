@@ -16,8 +16,9 @@ async function getArtikel(slug: string) {
   return await client.fetch('*[_type == "artikel" && slug.current == $slug][0]', { slug });
 }
 
-export default async function ArtikelPage({ params }: { params: { slug: string } }) {
-  const artikel = await getArtikel(params.slug);
+export default async function ArtikelPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const artikel = await getArtikel(resolvedParams.slug);
 
   if (!artikel) {
     return (
