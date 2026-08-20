@@ -41,7 +41,7 @@ export default async function ArtikelPage({ params }: { params: Promise<{ slug: 
       </header>
 
       <article className="container" style={{ maxWidth: '800px', marginTop: '60px' }}>
-        <Link href="/#artikel" style={{ color: 'var(--color-primary)', textDecoration: 'none', display: 'inline-block', marginBottom: '20px', fontWeight: '600' }}>
+        <Link href="/#edukasi" style={{ color: 'var(--color-primary)', textDecoration: 'none', display: 'inline-block', marginBottom: '20px', fontWeight: '600' }}>
           <i className="fa-solid fa-arrow-left"></i> Kembali
         </Link>
         
