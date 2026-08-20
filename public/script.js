@@ -450,6 +450,49 @@ function initPesmicScript() {
             }
         });
     }
+    /* ==========================================================================
+       13. TESTIMONIAL AUTO-SCROLL LOOP
+       ========================================================================== */
+    const testimonialGrid = document.querySelector('.testimonial-grid');
+    if (testimonialGrid) {
+        let autoScrollTimer;
+        
+        const scrollNext = () => {
+            const cards = testimonialGrid.querySelectorAll('.testimonial-card');
+            if (!cards.length) return;
+            // Width of one card + gap (30px)
+            const cardWidth = cards[0].offsetWidth + 30; 
+            
+            // Allow a small threshold (10px) to determine if we hit the end
+            if (testimonialGrid.scrollLeft + testimonialGrid.clientWidth >= testimonialGrid.scrollWidth - 10) {
+                // If at the end, scroll back to the beginning smoothly
+                testimonialGrid.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                // Scroll to the next card
+                testimonialGrid.scrollTo({ left: testimonialGrid.scrollLeft + cardWidth, behavior: 'smooth' });
+            }
+        };
+
+        const startAutoScroll = () => {
+            // Loop every 3 seconds
+            autoScrollTimer = setInterval(scrollNext, 3000);
+        };
+
+        const stopAutoScroll = () => {
+            clearInterval(autoScrollTimer);
+        };
+
+        // Start initially
+        startAutoScroll();
+
+        // Pause on user interaction so they can read/scroll manually
+        testimonialGrid.addEventListener('mouseenter', stopAutoScroll);
+        testimonialGrid.addEventListener('mouseleave', startAutoScroll);
+        testimonialGrid.addEventListener('touchstart', stopAutoScroll, { passive: true });
+        testimonialGrid.addEventListener('touchend', () => {
+            setTimeout(startAutoScroll, 3000); // Resume after 3s of no touch
+        });
+    }
 
 }
 
