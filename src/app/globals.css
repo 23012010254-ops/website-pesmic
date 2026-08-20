@@ -2823,55 +2823,60 @@ button {
     #comparison-table tbody {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 10px;
     }
     #comparison-table thead {
         display: none !important;
     }
     #comparison-table tr {
-        border: 1px solid rgba(197, 160, 89, 0.3) !important;
-        border-radius: 12px !important;
-        background-color: var(--color-primary-light) !important;
+        border: 1px solid rgba(197, 160, 89, 0.15) !important;
+        border-radius: 10px !important;
+        background-color: var(--color-primary-deep) !important;
         overflow: hidden !important;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.2) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
     }
     #comparison-table td {
         text-align: left !important;
         border: none !important;
-        border-bottom: 1px solid rgba(197, 160, 89, 0.1) !important;
-        padding: 10px 12px !important;
-        font-size: 0.85rem !important;
+        padding: 10px !important;
+        font-size: 0.78rem !important;
+        line-height: 1.4 !important;
     }
     #comparison-table td:nth-child(1) {
-        background-color: var(--color-primary-deep) !important;
+        background-color: rgba(197, 160, 89, 0.1) !important;
         color: var(--color-accent-gold) !important;
         font-family: var(--font-heading) !important;
-        font-size: 1.1rem !important;
+        font-size: 0.9rem !important;
         text-align: center !important;
-        border-bottom: 2px solid var(--color-accent-gold) !important;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.2) !important;
+        padding: 8px 10px !important;
+    }
+    #comparison-table td:nth-child(2) {
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
     }
     #comparison-table td:nth-child(2)::before {
-        content: "Pestisida Kimia Sintetis:";
+        content: "KIMIA SINTETIS:";
         display: block;
-        font-size: 0.8rem;
-        color: var(--color-text-muted);
-        margin-bottom: 8px;
+        font-size: 0.65rem;
+        color: #ff6b6b;
+        margin-bottom: 4px;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
     }
     #comparison-table td:nth-child(3) {
         background-color: rgba(197, 160, 89, 0.05) !important;
     }
     #comparison-table td:nth-child(3)::before {
-        content: "PESMIC (Alami Carica):";
+        content: "PESMIC:";
         display: block;
-        font-size: 0.8rem;
+        font-size: 0.65rem;
         color: var(--color-accent-gold);
-        margin-bottom: 8px;
+        margin-bottom: 4px;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
     }
 }
 
