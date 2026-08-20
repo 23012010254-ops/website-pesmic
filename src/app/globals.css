@@ -1088,6 +1088,10 @@ button {
 
 .product-price-row {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
 }
 
 .product-price {
@@ -1099,17 +1103,16 @@ button {
 
 .hemat-tag {
     display: inline-block;
-    margin-top: 8px;
-    padding: 5px 14px;
+    padding: 4px 10px;
     background: linear-gradient(135deg, rgba(197, 160, 89, 0.2) 0%, rgba(232, 191, 73, 0.15) 50%, rgba(197, 160, 89, 0.2) 100%);
     background-size: 200% 100%;
     color: #e8d5a3;
     font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 0.78rem;
+    font-weight: 700;
+    font-size: 0.72rem;
     letter-spacing: 0.5px;
     border: 1px solid rgba(197, 160, 89, 0.4);
-    border-radius: 8px;
+    border-radius: 6px;
     position: relative;
     overflow: hidden;
     animation: hematPulse 2.5s ease-in-out infinite, hematShimmer 4s linear infinite;
@@ -1117,6 +1120,7 @@ button {
         0 0 12px rgba(197, 160, 89, 0.2),
         inset 0 0 8px rgba(197, 160, 89, 0.08);
     transition: all 0.3s ease;
+    width: fit-content;
 }
 
 .hemat-tag::before {
