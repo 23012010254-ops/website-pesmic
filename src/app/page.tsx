@@ -795,20 +795,20 @@ export default async function Home() {
                 {/* Form Kolom */}
                 <div className="contact-form-wrapper scroll-reveal fade-right">
                     <h3>Kirim Pesan Langsung</h3>
-                    <p className="form-instruction">Tuliskan detail pertanyaan Anda di bawah ini, kami akan meneruskan pesan Anda ke admin WhatsApp kami secara otomatis.</p>
+                    <p className="form-instruction">Tuliskan detail pertanyaan Anda di bawah ini, kami akan meneruskan pesan Anda melalui Email.</p>
                     
-                    <form id="contact-wa-form">
+                    <form id="contact-email-form">
                         <div className="form-group">
                             <label htmlFor="form-name">Nama Lengkap</label>
                             <input type="text" id="form-name" placeholder="Masukkan nama lengkap Anda" required />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="form-phone">Nomor WhatsApp</label>
+                            <label htmlFor="form-phone">Nomor WhatsApp / Telepon</label>
                             <input type="tel" id="form-phone" placeholder="Contoh: 081234567890" required />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="form-email">Alamat Email (Opsional)</label>
-                            <input type="email" id="form-email" placeholder="Contoh: nama@domain.com" />
+                            <label htmlFor="form-email">Alamat Email Anda</label>
+                            <input type="email" id="form-email" placeholder="Contoh: nama@domain.com" required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="form-message">Pesan Anda</label>

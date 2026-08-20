@@ -295,25 +295,30 @@ function initPesmicScript() {
         });
     });
 
-    const contactForm = document.getElementById('contact-wa-form');
+    const contactForm = document.getElementById('contact-email-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             const name = document.getElementById('form-name').value.trim();
             const phone = document.getElementById('form-phone').value.trim();
-            const email = document.getElementById('form-email').value.trim() || 'Tidak disertakan';
+            const email = document.getElementById('form-email').value.trim();
             const messageText = document.getElementById('form-message').value.trim();
             
-            const formattedMessage = `Halo Admin PESMIC!%0A%0ASaya ingin berkonsultasi mengenai tanaman/produk. Berikut data saya:%0A%0A` +
-                                     `- *Nama Lengkap:* ${name}%0A` +
-                                     `- *No. WhatsApp:* ${phone}%0A` +
-                                     `- *Alamat Email:* ${email}%0A%0A` +
-                                     `*Pesan/Pertanyaan:*%0A${messageText}%0A%0A` +
-                                     `Terima kasih.`;
+            const adminEmail = 'admin@pesmic.com'; // You can change this later
+            const subject = encodeURIComponent(`Konsultasi PESMIC dari ${name}`);
+            const body = encodeURIComponent(
+                `Halo Admin PESMIC,\n\n` +
+                `Saya ingin berkonsultasi mengenai tanaman/produk. Berikut data saya:\n\n` +
+                `- Nama Lengkap: ${name}\n` +
+                `- No. WhatsApp/Telepon: ${phone}\n` +
+                `- Alamat Email: ${email}\n\n` +
+                `Pesan/Pertanyaan:\n${messageText}\n\n` +
+                `Terima kasih.`
+            );
             
-            const waUrl = `https://wa.me/${adminWhatsApp}?text=${formattedMessage}`;
-            window.open(waUrl, '_blank');
+            const mailtoUrl = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
+            window.location.href = mailtoUrl;
             
             contactForm.reset();
         });
