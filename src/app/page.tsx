@@ -23,6 +23,17 @@ async function getProduks() {
   try { return await client.fetch('*[_type == "produk"] | order(urutan asc)'); } catch(e) { return []; }
 }
 
+const getShopeeLink = (name: string) => {
+  const lowerName = name.toLowerCase();
+  if (lowerName.includes('tumbuh max')) return 'https://s.shopee.co.id/gPTHw7JGA';
+  if (lowerName.includes('fokus nutrisi')) return 'https://s.shopee.co.id/6fggR1Zz47';
+  if (lowerName.includes('panen hebat')) return 'https://s.shopee.co.id/4qF2FhFHgv';
+  if (lowerName.includes('hemat')) return 'https://s.shopee.co.id/80C41Yxp8c';
+  if (lowerName.includes('proteksi')) return 'https://s.shopee.co.id/6AkPqDwZRk';
+  if (lowerName.includes('max pro')) return 'https://s.shopee.co.id/3B6oGkJ0Y5';
+  return 'https://s.shopee.co.id/5fo09l5fNp'; // Default Shopee link
+};
+
 export default async function Home() {
   const pakets = await getPakets();
   const produks = await getProduks();
@@ -297,7 +308,7 @@ export default async function Home() {
                                 <button className="btn btn-primary btn-block btn-buy" data-product={produk.nama} data-price={`Rp ${produk.hargaDiskon?.toLocaleString('id-ID') || 0}`}>
                                     <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
                                 </button>
-                                <a href="https://s.shopee.co.id/5fo09l5fNp" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-block btn-shopee" style={{ marginTop: '10px', backgroundColor: '#EE4D2D', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                                <a href={getShopeeLink(produk.nama)} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-block btn-shopee" style={{ marginTop: '10px', backgroundColor: '#EE4D2D', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                                     <i className="fa-solid fa-shop"></i> Beli di Shopee
                                 </a>
                             </div>
@@ -346,7 +357,7 @@ export default async function Home() {
                                 <button className="btn btn-primary btn-block btn-buy" data-product={paket.nama} data-price={`Rp ${paket.hargaDiskon?.toLocaleString('id-ID')}`}>
                                     <i className="fa-solid fa-cart-shopping"></i> Pesan Sekarang
                                 </button>
-                                <a href="https://s.shopee.co.id/5fo09l5fNp" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-block btn-shopee" style={{ marginTop: '10px', backgroundColor: '#EE4D2D', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                                <a href={getShopeeLink(paket.nama)} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-block btn-shopee" style={{ marginTop: '10px', backgroundColor: '#EE4D2D', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                                     <i className="fa-solid fa-shop"></i> Beli di Shopee
                                 </a>
                             </div>
