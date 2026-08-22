@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { client } from '@/sanity/lib/client';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://pesmic.vercel.app'; 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://pesmic.my.id'; 
   
   let artikelUrls: MetadataRoute.Sitemap = [];
   

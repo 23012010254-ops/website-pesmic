@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PESMIC - Pestisida Alami Ampuh & Terjangkau",
     description: "Perlindungan alami dan ampuh untuk tanaman Anda. Jaga kesehatan tanaman tanpa bahan kimia berbahaya dengan PESMIC.",
-    url: "https://pesmic.vercel.app",
+    url: "https://pesmic.my.id",
     siteName: "PESMIC",
     locale: "id_ID",
     type: "website",
