@@ -2005,6 +2005,7 @@ button {
 .social-icons {
     display: flex;
     gap: 12px;
+    padding-bottom: 25px; /* Added spacing from border */
 }
 
 .social-icons a {
